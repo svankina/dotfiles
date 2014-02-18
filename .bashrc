@@ -107,7 +107,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 alias v='vim'
-alias esrc='vim ~/.bashrc'
+alias esrc='vim /home/svankina/workspace/dotfiles/.bashrc'
 alias src='source ~/.bashrc'
 alias nau='nautilus &'
 alias slm='sublime -b'
@@ -126,8 +126,8 @@ alias tm='tmux -u -2'
 alias ta='tmux attach'
 alias td='tmux detach'
 alias tl='tmux list-sessions'
-alias evim='vim /home/svankina/.vimrc'
-alias emux='vim /home/svankina/.tmux.conf'
+alias evim='vim /home/svankina/workspace/dotfiles/.vimrc'
+alias emux='vim /home/svankina/workspace/dotfiles/.tmux.conf'
 
 alias py='python'
 export PATH="$PATH:/home/svankina/opt/bin:/home/svankina/.local/bin"
@@ -151,5 +151,13 @@ if [ -n "$VIRTUAL_ENV" ]; then
   . "$VIRTUAL_ENV/bin/activate"
 fi
 
-alias pan='mkfifo ~/.config/pianobar/ctl && pianobar'
+#Pianobar start with control file
+function pan(){
+if [ ! -p ~/.config/pianobar/ctl ]; then
+    mkfifo ~/.config/pianobar/ctl 
+fi
+pianobar
+}
+#Pause from anywhere
 alias p="echo -n \'p\' > ~/.config/pianobar/ctl"
+
