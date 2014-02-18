@@ -151,13 +151,16 @@ if [ -n "$VIRTUAL_ENV" ]; then
   . "$VIRTUAL_ENV/bin/activate"
 fi
 
-#Pianobar start with control file
-function pan(){
-if [ ! -p ~/.config/pianobar/ctl ]; then
-    mkfifo ~/.config/pianobar/ctl 
+function pan() {
+if [ -n "$TMUX" ];then 
+    tmux new-window -d 'pianobar'
+else
+    pianobar
 fi
-pianobar
 }
+
 #Pause from anywhere
 alias p="echo -n \'p\' > ~/.config/pianobar/ctl"
+alias n="echo -n 'n' > ~/.config/pianobar/ctl"
+alias q="echo -n 'q' > ~/.config/pianobar/ctl"
 
