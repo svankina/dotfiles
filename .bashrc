@@ -109,7 +109,12 @@ fi
 alias v='vim'
 alias esrc='vim /home/svankina/workspace/dotfiles/.bashrc'
 alias src='source ~/.bashrc'
-alias nau='nautilus &'
+
+#Open nautilus in background, silently.
+function nau() {
+(nautilus "$*" &) &> /dev/null
+}
+
 alias slm='sublime -b'
 
 alias gst='git status'
