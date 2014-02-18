@@ -115,7 +115,10 @@ function nau() {
 (nautilus "$*" &) &> /dev/null
 }
 
-alias slm='sublime -b'
+function slm() {
+(sublime -b "$*" &) &> /dev/null
+}
+#alias slm='sublime -b'
 
 alias gst='git status'
 alias gpr='git pull --rebase'
