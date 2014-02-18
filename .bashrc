@@ -153,7 +153,7 @@ fi
 
 function pan() {
 if [ -n "$TMUX" ];then 
-    tmux new-window -d 'pianobar'
+    tmux new-window -n pianobar -d 'pianobar'
 else
     pianobar
 fi
