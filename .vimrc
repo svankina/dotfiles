@@ -90,7 +90,7 @@ vnoremap > >gv
 vnoremap < <gv
 
 " Paste settings
-"nnoremap <F2> to do paste magic. 
+"map <F2> to do paste magic. 
 nmap <F2> :set paste<CR>i
 imap <F2> <ESC>:set paste<CR>i<Right>
 au InsertLeave * set nopaste
@@ -135,6 +135,13 @@ nmap <F8> :TagbarToggle<CR>
 "Easy motion mapped to leader.
 map <Leader> <Plug>(easymotion-prefix)
 
+map <Leader>h <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>l <Plug>(easymotion-linebackward)
+
+let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
+
 set lazyredraw          " redraw only when we need to.
 
 " jk is escape
@@ -158,5 +165,5 @@ nnoremap k gk
 vnoremap j gj
 vnoremap k gk
 
-set fillchars=vert:│    " that's a vertical box-drawing character"
+set fillchars=vert:│    " Nicer split separation character.
 
