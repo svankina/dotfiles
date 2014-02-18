@@ -128,14 +128,10 @@ vnoremap st :Strikethrough<CR>
 nnoremap <silent> <C-X> :NERDTreeToggle<CR>
 nnoremap <Tab> <C-W><C-W>
 
-"nnoremap <leader>b Oimport pdb;pdb.set_trace();<Esc>j^
-
 nmap <F8> :TagbarToggle<CR>
 
 "Easy motion mapped to leader.
 map <Leader> <Plug>(easymotion-prefix)
-
-"let loaded_matchparen = 1
 
 set lazyredraw          " redraw only when we need to.
 
