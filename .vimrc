@@ -17,6 +17,8 @@ set encoding=utf-8
 
 set nocompatible              " be iMproved
 filetype on
+filetype plugin indent on
+filetype indent on
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -32,6 +34,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'majutsushi/tagbar'
+Bundle 'fweep/vim-tabber'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'kien/ctrlp.vim'
 Bundle 'davidhalter/jedi-vim'
@@ -39,7 +42,6 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'rking/ag.vim'
 
 
-filetype plugin indent on
 
 set backspace=indent,eol,start
 
@@ -169,3 +171,37 @@ set fillchars=vert:│    " Nicer split separation character.
 
 "Disable hlsearch on enter.
 nnoremap <CR> :nohlsearch<CR><CR>
+
+
+" Quote a word consisting of letters from iskeyword.
+nnoremap <silent> qw :call Quote('"')<CR>
+nnoremap <silent> qs :call Quote("'")<CR>
+nnoremap <silent> wq :call UnQuote()<CR>
+function! Quote(quote)
+  normal mz
+  exe 's/\(\k*\%#\k*\)/' . a:quote . '\1' . a:quote . '/'
+  normal `zl
+endfunction
+
+function! UnQuote()
+  normal mz
+  exe 's/["' . "'" . ']\(\k*\%#\k*\)[' . "'" . '"]/\1/'
+  normal `z
+endfunction
+
+"Toggle spellcheck.
+nnoremap <F7> :setlocal spell! spell?<CR>
+
+"Format JSON
+command -nargs=* JSON %!python -m json.tool <args>
+vnoremap <leader>json !python -m json.tool<CR>
+
+inoremap {<CR> {<CR>}<Esc>O
+
+"Tab navigation
+nnoremap th  :tabfirst<CR>
+nnoremap tj  :tabnext<CR>
+nnoremap tk  :tabprev<CR>
+nnoremap tl  :tablast<CR>
+
+nnoremap <C-t>     :tabnew<CR>
