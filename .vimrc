@@ -167,3 +167,5 @@ vnoremap k gk
 
 set fillchars=vert:│    " Nicer split separation character.
 
+"Disable hlsearch on enter.
+nnoremap <CR> :nohlsearch<CR><CR>
