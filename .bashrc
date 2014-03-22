@@ -138,7 +138,7 @@ alias evim='vim /home/svankina/workspace/dotfiles/.vimrc'
 alias emux='vim /home/svankina/workspace/dotfiles/.tmux.conf'
 
 alias py='python'
-export PATH="$PATH:/home/svankina/opt/bin:/home/svankina/.local/bin"
+export PATH="/home/svankina/opt/bin:/home/svankina/.local/bin:$PATH"
 
 export PYTHONPATH="$PYTHONPATH:~/.local/lib/python2.7/site-packages/"
 # Powerline
