@@ -40,6 +40,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'Raimondi/delimitMate'
 Bundle 'rking/ag.vim'
+Bundle 'tpope/vim-fugitive'
 
 
 
