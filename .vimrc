@@ -205,3 +205,6 @@ nnoremap tk  :tabprev<CR>
 nnoremap tl  :tablast<CR>
 
 nnoremap <C-t>     :tabnew<CR>
+nmap \l :setlocal number!<CR>
+
+nnoremap <leader>r Ouse Reply;Reply->new(config => "$ENV{HOME}/.replyrc")->run;<Esc>
