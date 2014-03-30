@@ -107,7 +107,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 alias v='vim'
-alias esrc='vim /home/svankina/workspace/dotfiles/.bashrc'
+alias esrc='vim ~/.bashrc'
 alias src='source ~/.bashrc'
 
 #Open nautilus in background, silently.
@@ -134,8 +134,8 @@ alias tm='tmux -u -2'
 alias ta='tmux attach'
 alias td='tmux detach'
 alias tl='tmux list-sessions'
-alias evim='vim /home/svankina/workspace/dotfiles/.vimrc'
-alias emux='vim /home/svankina/workspace/dotfiles/.tmux.conf'
+alias evim='vim ~/.vimrc'
+alias emux='vim ~/.tmux.conf'
 
 alias py='python'
 export PATH="/home/svankina/opt/bin:/home/svankina/.local/bin:$PATH"
@@ -172,3 +172,4 @@ alias p="echo -n \'p\' > ~/.config/pianobar/ctl"
 alias n="echo -n 'n' > ~/.config/pianobar/ctl"
 alias q="echo -n 'q' > ~/.config/pianobar/ctl"
 
+export TERM=xterm-256color

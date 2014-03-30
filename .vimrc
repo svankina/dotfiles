@@ -41,8 +41,6 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'rking/ag.vim'
 Bundle 'tpope/vim-fugitive'
 
-
-
 set backspace=indent,eol,start
 
 set number
