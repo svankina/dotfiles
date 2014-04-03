@@ -206,3 +206,7 @@ nnoremap <C-t>     :tabnew<CR>
 nmap \l :setlocal number!<CR>
 
 nnoremap <leader>r Ouse Reply;Reply->new(config => "$ENV{HOME}/.replyrc")->run;<Esc>
+cnoreabbrev ag Ag
+
+"Avoid huge cost of traversing perl libs for completion.
+set complete-=i
