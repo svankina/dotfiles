@@ -40,6 +40,7 @@ Bundle 'davidhalter/jedi-vim'
 Bundle 'Raimondi/delimitMate'
 Bundle 'rking/ag.vim'
 Bundle 'tpope/vim-fugitive'
+Bundle 'sandeepcr529/Buffet.vim'
 
 set backspace=indent,eol,start
 
@@ -50,6 +51,7 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+set background=dark
 
 
 " Statusline
@@ -66,17 +68,18 @@ set hlsearch
 set incsearch
 set showcmd
 set modeline
+set showmode
+syntax enable
+colorscheme distinguished
 
+" How many tenths of a second to blink when matching brackets
+set mat=2
 
 " Return to last edit position when opening files
 autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
      \   exe "normal! g`\"" |
      \ endif
-
-syntax enable
-set background=dark
-colorscheme distinguished 
 
 let mapleader=","
 
