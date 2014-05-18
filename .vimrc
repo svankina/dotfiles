@@ -41,9 +41,10 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'rking/ag.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'sandeepcr529/Buffet.vim'
+Bundle 'basepi/vim-conque'
+
 
 set backspace=indent,eol,start
-
 set number
 set ruler
 set smartindent
@@ -135,16 +136,6 @@ nnoremap <Tab> <C-W><C-W>
 
 nmap <F8> :TagbarToggle<CR>
 
-"Easy motion mapped to leader.
-map <Leader> <Plug>(easymotion-prefix)
-
-map <Leader>h <Plug>(easymotion-lineforward)
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
-map <Leader>l <Plug>(easymotion-linebackward)
-
-let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
-
 set lazyredraw          " redraw only when we need to.
 
 " jk is escape
@@ -153,6 +144,8 @@ inoremap jk <esc>
 " move to beginning/end of line
 nnoremap B ^
 nnoremap E $
+vnoremap B ^
+vnoremap E $
 
 " $/^ doesn't do anything
 nnoremap $ <nop>
@@ -172,7 +165,6 @@ set fillchars=vert:│    " Nicer split separation character.
 
 "Disable hlsearch on enter.
 nnoremap <CR> :nohlsearch<CR><CR>
-
 
 " Quote a word consisting of letters from iskeyword.
 nnoremap <silent> qw :call Quote('"')<CR>
@@ -212,4 +204,4 @@ nnoremap <leader>r Ouse Reply;Reply->new(config => "$ENV{HOME}/.replyrc")->run;<
 cnoreabbrev ag Ag
 
 "Avoid huge cost of traversing perl libs for completion.
-set complete-=i
+autocmd FileType perl set complete-=i
