@@ -164,7 +164,7 @@ vnoremap k gk
 set fillchars=vert:│    " Nicer split separation character.
 
 "Disable hlsearch on enter.
-nnoremap <CR> :nohlsearch<CR><CR>
+nnoremap <silent> <CR> :nohlsearch<CR><CR>
 
 " Quote a word consisting of letters from iskeyword.
 nnoremap <silent> qw :call Quote('"')<CR>
