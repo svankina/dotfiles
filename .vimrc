@@ -20,32 +20,43 @@ filetype on
 filetype plugin indent on
 filetype indent on
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set runtimepath+=~/.vim/bundle/neobundle.vim/
 
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
+ " Required:
+ call neobundle#begin(expand('~/.vim/bundle/'))
 
-" My bundles here:
-"
-Bundle 'ervandew/supertab'
-Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'majutsushi/tagbar'
-Bundle 'fweep/vim-tabber'
-Bundle 'kien/ctrlp.vim'
-Bundle 'davidhalter/jedi-vim'
-Bundle 'Raimondi/delimitMate'
-Bundle 'rking/ag.vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'sandeepcr529/Buffet.vim'
-Bundle 'basepi/vim-conque'
-Bundle 'maxbrunsfeld/vim-yankstack'
-Bundle 'vim-scripts/openssl.vim'
-"Bundle 'Shougo/unite.vim'
-"Bundle 'Shougo/vimproc.vim'
+ " Let NeoBundle manage NeoBundle
+ " Required:
+ NeoBundleFetch 'Shougo/neobundle.vim'
+
+ " My NeoBundles here:
+ " Refer to |:NeoNeoBundle-examples|.
+ " Note: You don't set neobundle setting in .gvimrc!
+NeoBundle 'ervandew/supertab'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'majutsushi/tagbar'
+NeoBundle 'fweep/vim-tabber'
+NeoBundle 'davidhalter/jedi-vim'
+NeoBundle 'Raimondi/delimitMate'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'basepi/vim-conque'
+NeoBundle 'maxbrunsfeld/vim-yankstack'
+NeoBundle 'vim-scripts/openssl.vim'
+NeoBundle 'Shougo/unite.vim'
+
+let vimproc_updcmd = has('win64') ?
+      \ 'tools\\update-dll-mingw 64' : 'tools\\update-dll-mingw 32'
+execute "NeoBundle 'Shougo/vimproc.vim'," . string({
+      \ 'build' : {
+      \     'windows' : vimproc_updcmd,
+      \     'cygwin' : 'make -f make_cygwin.mak',
+      \     'mac' : 'make -f make_mac.mak',
+      \     'unix' : 'make -f make_unix.mak',
+      \    },
+      \ })
+call neobundle#end()
 
 set backspace=indent,eol,start
 set number
@@ -214,4 +225,7 @@ call yankstack#setup()
 nmap <leader>p <Plug>yankstack_substitute_older_paste
 nmap <leader>o <Plug>yankstack_substitute_newer_paste
 
-"nnoremap <C-p> :Unite file_rec/async<cr>
+nnoremap <C-p> :Unite -start-insert file_rec/async<cr>
+nnoremap <space>/ :Unite -start-insert grep:.<cr>
+nnoremap <space>s :Unite -quick-match buffer<cr>
+let g:unite_source_grep_connamd='ag'
