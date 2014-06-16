@@ -11,7 +11,7 @@ imap <down> <Nop>
 imap <left> <Nop>
 imap <right> <Nop>
 
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
 
 set encoding=utf-8
 
@@ -42,7 +42,10 @@ Bundle 'rking/ag.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'sandeepcr529/Buffet.vim'
 Bundle 'basepi/vim-conque'
-
+Bundle 'maxbrunsfeld/vim-yankstack'
+Bundle 'vim-scripts/openssl.vim'
+"Bundle 'Shougo/unite.vim'
+"Bundle 'Shougo/vimproc.vim'
 
 set backspace=indent,eol,start
 set number
@@ -133,6 +136,7 @@ vnoremap st :Strikethrough<CR>
 
 nnoremap <silent> <C-X> :NERDTreeToggle<CR>
 nnoremap <Tab> <C-W><C-W>
+nnoremap <silent> <C-B> :Bufferlist<CR>
 
 nmap <F8> :TagbarToggle<CR>
 
@@ -201,7 +205,13 @@ nnoremap <C-t>     :tabnew<CR>
 nmap \l :setlocal number!<CR>
 
 nnoremap <leader>r Ouse Reply;Reply->new(config => "$ENV{HOME}/.replyrc")->run;<Esc>
+nnoremap <leader>b Oimport pdb;pdb.set_trace()<Esc>
 cnoreabbrev ag Ag
 
 "Avoid huge cost of traversing perl libs for completion.
 autocmd FileType perl set complete-=i
+call yankstack#setup()
+nmap <leader>p <Plug>yankstack_substitute_older_paste
+nmap <leader>o <Plug>yankstack_substitute_newer_paste
+
+"nnoremap <C-p> :Unite file_rec/async<cr>
