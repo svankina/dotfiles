@@ -237,3 +237,5 @@ call unite#custom#profile('default', 'context', {
 \   'winheight': 10,
 \   'direction': 'botright',
 \ })
+
+nnoremap <silent> cts :ConqueTermVSplit bash<cr>
