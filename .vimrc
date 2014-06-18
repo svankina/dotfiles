@@ -45,6 +45,7 @@ NeoBundle 'basepi/vim-conque'
 NeoBundle 'maxbrunsfeld/vim-yankstack'
 NeoBundle 'vim-scripts/openssl.vim'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'kien/ctrlp.vim'
 
 let vimproc_updcmd = has('win64') ?
       \ 'tools\\update-dll-mingw 64' : 'tools\\update-dll-mingw 32'
@@ -225,7 +226,14 @@ call yankstack#setup()
 nmap <leader>p <Plug>yankstack_substitute_older_paste
 nmap <leader>o <Plug>yankstack_substitute_newer_paste
 
-nnoremap <C-p> :Unite -start-insert file_rec/async<cr>
+"nnoremap <C-p> :Unite -start-insert file_rec/async<cr>
 nnoremap <space>/ :Unite -start-insert grep:.<cr>
 nnoremap <space>s :Unite -quick-match buffer<cr>
 let g:unite_source_grep_connamd='ag'
+
+" Like ctrlp.vim settings for unite.
+call unite#custom#profile('default', 'context', {
+\   'start_insert': 1,
+\   'winheight': 10,
+\   'direction': 'botright',
+\ })
