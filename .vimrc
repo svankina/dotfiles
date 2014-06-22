@@ -228,7 +228,6 @@ nmap <leader>o <Plug>yankstack_substitute_newer_paste
 
 "nnoremap <C-p> :Unite -start-insert file_rec/async<cr>
 nnoremap <space>/ :Unite -start-insert grep:.<cr>
-nnoremap <space>s :Unite -quick-match buffer<cr>
 let g:unite_source_grep_connamd='ag'
 
 " Like ctrlp.vim settings for unite.
