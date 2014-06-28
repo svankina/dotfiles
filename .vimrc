@@ -46,6 +46,7 @@ NeoBundle 'maxbrunsfeld/vim-yankstack'
 NeoBundle 'vim-scripts/openssl.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'tpope/vim-surround'
 
 let vimproc_updcmd = has('win64') ?
       \ 'tools\\update-dll-mingw 64' : 'tools\\update-dll-mingw 32'
