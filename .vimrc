@@ -238,4 +238,4 @@ call unite#custom#profile('default', 'context', {
 \   'direction': 'botright',
 \ })
 
-nnoremap <silent> cts :ConqueTermVSplit bash<cr>
+nnoremap <silent> CTS :ConqueTermVSplit bash<cr>
