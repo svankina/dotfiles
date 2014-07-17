@@ -240,3 +240,4 @@ call unite#custom#profile('default', 'context', {
 \ })
 
 nnoremap <silent> CTS :ConqueTermVSplit bash<cr>
+nnoremap Y y$
