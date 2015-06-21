@@ -188,22 +188,6 @@ set fillchars=vert:│    " Nicer split separation character.
 "Disable hlsearch on enter.
 nnoremap <silent> <CR> :nohlsearch<CR><CR>
 
-" Quote a word consisting of letters from iskeyword.
-nnoremap <silent> qw :call Quote('"')<CR>
-nnoremap <silent> qs :call Quote("'")<CR>
-nnoremap <silent> wq :call UnQuote()<CR>
-function! Quote(quote)
-  normal mz
-  exe 's/\(\k*\%#\k*\)/' . a:quote . '\1' . a:quote . '/'
-  normal `zl
-endfunction
-
-function! UnQuote()
-  normal mz
-  exe 's/["' . "'" . ']\(\k*\%#\k*\)[' . "'" . '"]/\1/'
-  normal `z
-endfunction
-
 "Toggle spellcheck.
 nnoremap <F7> :setlocal spell! spell?<CR>
 
@@ -236,3 +220,4 @@ nnoremap <space>/ :Ag<space>
 
 nnoremap <silent> CTS :ConqueTermVSplit bash<cr>
 nnoremap Y y$
+set iskeyword+=-

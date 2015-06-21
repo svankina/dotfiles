@@ -173,13 +173,11 @@ alias n="echo -n 'n' > ~/.config/pianobar/ctl"
 alias q="echo -n 'q' > ~/.config/pianobar/ctl"
 
 export TERM=xterm-256color
-#export ANDROID_HOME="/home/svankina/my_apps/android-sdk-linux/tools"
-export ANDROID_HOME="/home/svankina/my_apps/android-sdk-linux"
-export ANDROID_PLATFORM_TOOLS="/home/svankina/my_apps/android-sdk-linux/platform-tools"
-export PATH=${PATH}:$ANDROID_HOME:$ANDROID_PLATFORM_TOOLS
 export PATH=${PATH}:/usr/lib/jvm/java-7-openjdk-amd64/bin/
 
 #alias xo='xdg-open'
 function xo {
     xdg-open $1 > /dev/null 2>&1 &
 }
+
+source ~/.bash_aliases
