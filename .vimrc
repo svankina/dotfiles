@@ -149,7 +149,7 @@ endfunction
 vnoremap ol :Overline<CR>
 vnoremap ul :Underline<CR>
 vnoremap dul :DoubleUnderline<CR>
-vnoremap st :Strikethrough<CR>
+vnoremap st :Strikethrough<CR> dd G p ''zz
 
 nnoremap <silent> <C-X> :NERDTreeToggle<CR>
 nnoremap <Tab> <C-W><C-W>
@@ -176,6 +176,9 @@ nnoremap ^ <nop>
 " edit and load vimrc bindings
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
+
+nnoremap <leader>v :vsp<CR>
+
 
 "Motion over wrapped lines like normal editor.
 nnoremap j gj
