@@ -51,6 +51,9 @@ NeoBundle 'mattn/emmet-vim'
 NeoBundle 'sukima/xmledit'
 NeoBundle 'vim-scripts/matchit.zip'
 NeoBundle 'rking/ag.vim'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'sjl/gundo.vim'
+NeoBundle 'ntpeters/vim-better-whitespace'
 
 let vimproc_updcmd = has('win64') ?
       \ 'tools\\update-dll-mingw 64' : 'tools\\update-dll-mingw 32'
@@ -224,3 +227,5 @@ nnoremap <space>/ :Ag<space>
 nnoremap <silent> CTS :ConqueTermVSplit bash<cr>
 nnoremap Y y$
 set iskeyword+=-
+nnoremap <F5> :GundoToggle<CR>
+nnoremap <leader>w :StripWhitespace<CR>

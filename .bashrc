@@ -160,7 +160,7 @@ if [ -n "$VIRTUAL_ENV" ]; then
 fi
 
 function pan() {
-if [ -n "$TMUX" ];then 
+if [ -n "$TMUX" ];then
     tmux new-window -n pianobar -d 'pianobar | tee ~/.config/pianobar/now_playing'
 else
     pianobar
