@@ -126,6 +126,7 @@ alias ga='git add'
 alias gd='git diff'
 alias gco='git checkout'
 alias gs='git status'
+alias gf='ga $_'
 
 export WORKON_HOME=~/Envs
 source /usr/local/bin/virtualenvwrapper.sh
@@ -180,4 +181,5 @@ function xo {
     xdg-open $1 > /dev/null 2>&1 &
 }
 
+alias elias='v ~/.bash_aliases'
 source ~/.bash_aliases

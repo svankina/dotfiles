@@ -39,7 +39,7 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'fweep/vim-tabber'
 NeoBundle 'davidhalter/jedi-vim'
-NeoBundle 'Raimondi/delimitMate'
+"NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'basepi/vim-conque'
 NeoBundle 'maxbrunsfeld/vim-yankstack'
@@ -117,7 +117,7 @@ vnoremap > >gv
 vnoremap < <gv
 
 " Paste settings
-"map <F2> to do paste magic. 
+"map <F2> to do paste magic.
 nmap <F2> :set paste<CR>i
 imap <F2> <ESC>:set paste<CR>i<Right>
 au InsertLeave * set nopaste
@@ -229,3 +229,5 @@ nnoremap Y y$
 set iskeyword+=-
 nnoremap <F5> :GundoToggle<CR>
 nnoremap <leader>w :StripWhitespace<CR>
+
+set shellcmdflag=-ic
