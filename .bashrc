@@ -177,9 +177,10 @@ export TERM=xterm-256color
 export PATH=${PATH}:/usr/lib/jvm/java-7-openjdk-amd64/bin/
 
 #alias xo='xdg-open'
-function xo {
+function x {
     xdg-open $1 > /dev/null 2>&1 &
 }
 
 alias elias='v ~/.bash_aliases'
 source ~/.bash_aliases
+export PYTHONSTARTUP=~/.pythonrc
