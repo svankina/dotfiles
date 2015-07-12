@@ -231,3 +231,7 @@ nnoremap <F5> :GundoToggle<CR>
 nnoremap <leader>w :StripWhitespace<CR>
 
 set shellcmdflag=-ic
+
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '/platforms',
+    \ }
