@@ -11,7 +11,7 @@ imap <down> <Nop>
 imap <left> <Nop>
 imap <right> <Nop>
 
-"set clipboard=unnamedplus
+set clipboard=unnamedplus
 
 set encoding=utf-8
 
