@@ -185,3 +185,5 @@ function x {
 alias elias='v ~/.bash_aliases'
 source ~/.bash_aliases
 export PYTHONSTARTUP=~/.pythonrc
+
+alias windows='sudo grub-reboot 2 && sudo reboot'
