@@ -175,7 +175,7 @@ alias q="echo -n 'q' > ~/.config/pianobar/ctl"
 
 export TERM=xterm-256color
 export PATH=${PATH}:/usr/lib/jvm/java-7-openjdk-amd64/bin/
-export PATH=${PATH}:/home/svankina/my_apps/android-sdk-linux/platform-tools:/home/svankina/my_apps/android-sdk-linux/tools
+export PATH=${PATH}:/home/svankina/my_apps/android-sdk-linux/tools
 
 #alias xo='xdg-open'
 function x {
@@ -187,3 +187,6 @@ source ~/.bash_aliases
 export PYTHONSTARTUP=~/.pythonrc
 
 alias windows='sudo grub-reboot 2 && sudo reboot'
+
+alias xtar='tar -xvf'
+alias ctar='tar -czf'
