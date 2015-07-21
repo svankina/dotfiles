@@ -120,7 +120,6 @@ function slm() {
 }
 #alias slm='sublime -b'
 
-alias gst='git status'
 alias gpr='git pull --rebase'
 alias ga='git add'
 alias gd='git diff'
@@ -176,6 +175,7 @@ alias q="echo -n 'q' > ~/.config/pianobar/ctl"
 export TERM=xterm-256color
 export PATH=${PATH}:/usr/lib/jvm/java-7-openjdk-amd64/bin/
 export PATH=${PATH}:/home/svankina/my_apps/android-sdk-linux/tools
+export ANDROID_HOME=/home/svankina/my_apps/android-sdk-linux/
 
 #alias xo='xdg-open'
 function x {
