@@ -40,8 +40,6 @@ NeoBundle 'majutsushi/tagbar'
 NeoBundle 'fweep/vim-tabber'
 NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'basepi/vim-conque'
-NeoBundle 'maxbrunsfeld/vim-yankstack'
 NeoBundle 'vim-scripts/openssl.vim'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'tpope/vim-surround'
@@ -55,6 +53,7 @@ NeoBundle 'sjl/gundo.vim'
 NeoBundle 'ntpeters/vim-better-whitespace'
 NeoBundle 'maksimr/vim-jsbeautify'
 NeoBundle 'Lokaltog/vim-distinguished'
+
 
 let vimproc_updcmd = has('win64') ?
       \ 'tools\\update-dll-mingw 64' : 'tools\\update-dll-mingw 32'
@@ -219,16 +218,11 @@ cnoreabbrev ag Ag
 
 "Avoid huge cost of traversing perl libs for completion.
 autocmd FileType perl set complete-=i
-call yankstack#setup()
-nmap <leader>p <Plug>yankstack_substitute_older_paste
-nmap <leader>o <Plug>yankstack_substitute_newer_paste
 
 nnoremap <space>/ :Ag<space>
 
-nnoremap <silent> CTS :ConqueTermVSplit bash<cr>
 nnoremap Y y$
 set iskeyword+=-
-nnoremap <F5> :GundoToggle<CR>
 nnoremap <leader>w :StripWhitespace<CR>
 
 set shellcmdflag=-ic
