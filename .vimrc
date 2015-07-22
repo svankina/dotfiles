@@ -225,6 +225,7 @@ nnoremap Y y$
 set iskeyword+=-
 nnoremap <leader>w :StripWhitespace<CR>
 
+"zsh freaks out if this is on
 "set shellcmdflag=-ic
 
 let g:ctrlp_custom_ignore = {
