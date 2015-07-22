@@ -1,5 +1,5 @@
 #Libraries required by a lot of stuff
-sudo apt-get install automake libevent-dev libncurses5-dev gnome-tweak-tool libncursesw5-dev
+sudo apt-get install automake libevent-dev libncurses5-dev gnome-tweak-tool libncursesw5-dev dconf-editor
 
 #Setup git
 sudo apt-get install git
@@ -68,3 +68,6 @@ git clone git@github.com:svankina/dotfiles.git
 sh dotfiles/setup.sh
 touch $HOME/.bash_aliases
 
+sudo apt-get install zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+chsh -s /usr/bin/zsh
