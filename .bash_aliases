@@ -64,4 +64,5 @@ alias windows='sudo grub-reboot 2 && sudo reboot'
 alias xtar='tar -xvf'
 alias ctar='tar -czf'
 
+source ~/.bash_personal
 # vim: set ft=sh
