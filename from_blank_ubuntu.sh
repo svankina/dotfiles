@@ -26,6 +26,8 @@ rm get-pip.py
 #Install virtualenvwrapper
 sudo pip install virtualenvwrapper
 
+sudo chown -R svankina $HOME/.cache/pip
+
 #Install powerline
 pip install --user powerline-status
 
