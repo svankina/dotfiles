@@ -88,4 +88,3 @@ source ~/.bash_aliases
 if [ "$TMUX" = "" ]; then tmux; fi
 
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
-alias to='python3 $HOME/my_apps/cliist/cliist.py'

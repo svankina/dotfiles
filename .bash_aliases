@@ -48,7 +48,8 @@ fi
 
 export TERM=xterm-256color
 export PATH=${PATH}:/usr/lib/jvm/java-7-openjdk-amd64/bin/
-export PATH=${PATH}:/home/svankina/my_apps/android-sdk-linux/tools
+export PATH=${PATH}:/home/svankina/my_apps/android-sdk-linux/tools:/home/svankina/my_apps/android-sdk-linux/platform-tools
+
 export ANDROID_HOME=/home/svankina/my_apps/android-sdk-linux/
 
 function x {
@@ -65,4 +66,9 @@ alias xtar='tar -xvf'
 alias ctar='tar -czf'
 
 source ~/.bash_personal
+
+export PATH=$PATH:$HOME/my_apps/my_scripts/
+alias cli='$HOME/my_apps/cliist/cliist.py'
+
+
 # vim: set ft=sh
