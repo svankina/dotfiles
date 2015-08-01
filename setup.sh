@@ -1,4 +1,4 @@
-#mv ~/.bashrc ~/bashrc_bak
+mv ~/.bashrc ~/bashrc_bak
 
 ln -s /home/svankina/wksp/dotfiles/.bashrc /home/svankina/.bashrc
 ln -s /home/svankina/wksp/dotfiles/.vimrc /home/svankina/.vimrc
