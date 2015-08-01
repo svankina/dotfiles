@@ -231,3 +231,5 @@ nnoremap <leader>w :StripWhitespace<CR>
 let g:ctrlp_custom_ignore = {
     \ 'dir':  '/platforms',
     \ }
+
+autocmd FileType html setlocal shiftwidth=2 tabstop=2 expandtab!
