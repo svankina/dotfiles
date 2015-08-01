@@ -1,3 +1,6 @@
+#Fail on error
+set -e
+
 #Libraries required by a lot of stuff
 sudo apt-get install automake libevent-dev libncurses5-dev gnome-tweak-tool libncursesw5-dev dconf-editor
 
