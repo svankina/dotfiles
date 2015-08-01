@@ -40,7 +40,6 @@ sudo apt-get install vim-gnome
 #Setup NeoBundle
 curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh
 sh install.sh
-vim +NeoBundleInstall +qall
 rm install.sh
 
 
@@ -71,7 +70,8 @@ mkdir ~/wksp
 cd wksp
 git clone git@github.com:svankina/dotfiles.git
 sh dotfiles/setup.sh
-touch $HOME/.bash_aliases
+
+vim +NeoBundleInstall +qall
 
 sudo apt-get install zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
