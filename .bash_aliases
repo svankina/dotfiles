@@ -1,4 +1,5 @@
 # some more ls aliases
+alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias la='ls -lA'
 alias l='ls -ClFh'
@@ -70,5 +71,9 @@ source ~/.bash_personal
 export PATH=$PATH:$HOME/my_apps/my_scripts/
 alias cli='$HOME/my_apps/cliist/cliist.py'
 
+alias rm='trash-put'
+alias sai='sudo apt-get install --assume-yes'
+
 
 # vim: set ft=sh
+
