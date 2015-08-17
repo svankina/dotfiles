@@ -75,6 +75,10 @@ alias rm='trash-put'
 alias sai='sudo apt-get install --assume-yes'
 alias ios='ionic serve'
 
+alias eps='v ~/.bash_personal'
+
+
+
+
 
 # vim: set ft=sh
-
