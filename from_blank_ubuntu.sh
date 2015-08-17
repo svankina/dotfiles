@@ -62,6 +62,7 @@ sh dotfiles/setup.sh
 
 vim +NeoBundleInstall +qall
 
-sudo apt-get install
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-chsh -s /usr/bin/zsh
+mv ~/.vim/bundle/xmledit/ftplugin/html.vim ~/.vim/bundle/xmledit/ftplugin/htmlvim_bak
+ln -s /home/svankina/.vim/bundle/xmledit/ftplugin/xml.vim /home/svankina/.vim/bundle/xmledit/ftplugin/html.vim
+
+#sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

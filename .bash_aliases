@@ -73,6 +73,7 @@ alias cli='$HOME/my_apps/cliist/cliist.py'
 
 alias rm='trash-put'
 alias sai='sudo apt-get install --assume-yes'
+alias ios='ionic serve'
 
 
 # vim: set ft=sh
