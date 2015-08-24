@@ -76,9 +76,8 @@ alias sai='sudo apt-get install --assume-yes'
 alias ios='ionic serve'
 
 alias eps='v ~/.bash_personal'
-
-
-
-
-
+alias pys='python -m SimpleHTTPServer'
+alias eps='v ~/.bash_personal'
+alias tdi='$HOME/my_apps/cliist/cliist.py'
+alias ira='ionic run android'
 # vim: set ft=sh
