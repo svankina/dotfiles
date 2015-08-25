@@ -23,6 +23,7 @@ alias gd='git diff'
 alias gco='git checkout'
 alias gs='git status'
 alias gf='ga $_'
+alias gcm='git commit -m'
 
 export WORKON_HOME=~/Envs
 source /usr/local/bin/virtualenvwrapper.sh
@@ -79,5 +80,6 @@ alias eps='v ~/.bash_personal'
 alias pys='python -m SimpleHTTPServer'
 alias eps='v ~/.bash_personal'
 alias tdi='$HOME/my_apps/cliist/cliist.py'
+alias iba='ionic build android'
 alias ira='ionic run android'
 # vim: set ft=sh
