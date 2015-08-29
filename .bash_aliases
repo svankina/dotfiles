@@ -82,4 +82,8 @@ alias eps='v ~/.bash_personal'
 alias tdi='$HOME/my_apps/cliist/cliist.py'
 alias iba='ionic build android'
 alias ira='ionic run android'
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh
+
 # vim: set ft=sh
