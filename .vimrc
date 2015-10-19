@@ -213,7 +213,7 @@ nnoremap <C-t>     :tabnew<CR>
 nmap \l :setlocal number!<CR>
 
 nnoremap <leader>r Ouse Reply;Reply->new(config => "$ENV{HOME}/.replyrc")->run;<Esc>
-nnoremap <leader>b Oimport pdb;pdb.set_trace()<Esc>
+nnoremap <leader>b koimport pdb;pdb.set_trace()<Esc>
 cnoreabbrev ag Ag
 
 "Avoid huge cost of traversing perl libs for completion.
