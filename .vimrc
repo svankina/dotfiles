@@ -233,3 +233,5 @@ let g:ctrlp_custom_ignore = {
     \ }
 
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 expandtab!
+"Remove annoying smartindent resetting to start of line when first character in line is #
+inoremap # X#
