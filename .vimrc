@@ -180,7 +180,7 @@ nnoremap ^ <nop>
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
-nnoremap <leader>v :vsp<CR>
+"nnoremap <leader>v :vsp<CR>
 
 
 "Motion over wrapped lines like normal editor.
@@ -223,7 +223,7 @@ nnoremap <space>/ :Ag<space>
 
 nnoremap Y y$
 set iskeyword+=-
-nnoremap <leader>w :StripWhitespace<CR>
+nnoremap <leader>w :StripWhitespace<CR>:w<CR>
 
 "zsh freaks out if this is on
 "set shellcmdflag=-ic

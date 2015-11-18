@@ -58,6 +58,10 @@ function x {
     xdg-open $1 > /dev/null 2>&1 &
 }
 
+function da {
+    date -d @$1
+}
+
 alias elias='v ~/.bash_aliases'
 
 export PYTHONSTARTUP=~/.pythonrc
@@ -84,4 +88,7 @@ alias iba='ionic build android'
 alias ira='ionic run android'
 
 alias geny='$HOME/my_apps/genymotion/genymotion'
+eval $(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)
+
+
 # vim: set ft=sh
