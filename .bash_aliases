@@ -89,6 +89,10 @@ alias ira='ionic run android'
 
 alias geny='$HOME/my_apps/genymotion/genymotion'
 eval $(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)
+alias p3='python3'
+
+
+
 
 
 # vim: set ft=sh
