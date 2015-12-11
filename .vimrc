@@ -53,6 +53,7 @@ NeoBundle 'sjl/gundo.vim'
 NeoBundle 'ntpeters/vim-better-whitespace'
 NeoBundle 'maksimr/vim-jsbeautify'
 NeoBundle 'Lokaltog/vim-distinguished'
+NeoBundle 'mhinz/vim-startify'
 
 
 let vimproc_updcmd = has('win64') ?
@@ -152,7 +153,7 @@ endfunction
 vnoremap ol :Overline<CR>
 vnoremap ul :Underline<CR>
 vnoremap dul :DoubleUnderline<CR>
-vnoremap st :Strikethrough<CR> dd G p ''zz
+vnoremap st :Strikethrough<CR>
 
 nnoremap <silent> <C-X> :NERDTreeToggle<CR>
 nnoremap <Tab> <C-W><C-W>
@@ -235,3 +236,9 @@ let g:ctrlp_custom_ignore = {
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 expandtab!
 "Remove annoying smartindent resetting to start of line when first character in line is #
 inoremap # X#
+nnoremap <leader>m @@
+"Syntastic ignore angular, ionic
+let g:syntastic_html_tidy_ignore_errors=[
+\'proprietary attribute "ng-',
+\"<ion-", "</ion-"
+\]
