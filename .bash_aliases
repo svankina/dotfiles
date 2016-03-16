@@ -2,7 +2,7 @@
 alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias la='ls -lA'
-alias l='ls -ClFh'
+alias l='ls -ClFh --hide="*.pyc"'
 
 alias v='vim'
 alias esrc='vim ~/.zshrc'

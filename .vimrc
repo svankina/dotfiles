@@ -240,3 +240,15 @@ let g:syntastic_html_tidy_ignore_errors=[
 \'proprietary attribute "ng-',
 \"<ion-", "</ion-"
 \]
+
+" Move to the previous buffer with "gp"
+nnoremap gp :bp<CR>
+
+" Move to the next buffer with "gn"
+nnoremap gn :bn<CR>
+
+" List all possible buffers with "gl"
+nnoremap gl :ls<CR>
+
+" List all possible buffers with "gb" and accept a new buffer argument [1]
+nnoremap gb :ls<CR>:b
