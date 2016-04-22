@@ -26,7 +26,7 @@ alias gf='ga $_'
 alias gcm='git commit -m'
 
 export WORKON_HOME=~/Envs
-source /usr/local/bin/virtualenvwrapper.sh
+source ~/.local/bin/virtualenvwrapper.sh
 
 alias tm='tmux -u -2'
 alias ta='tmux attach'
