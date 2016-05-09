@@ -49,7 +49,7 @@ if [ -n "$VIRTUAL_ENV" ]; then
 fi
 
 export TERM=xterm-256color
-export PATH=${PATH}:/usr/lib/jvm/java-7-openjdk-amd64/bin/
+export PATH=${PATH}:/home/svankina/my_apps/jdk1.8.0_92/bin
 export PATH=${PATH}:/home/svankina/my_apps/android-sdk-linux/tools:/home/svankina/my_apps/android-sdk-linux/platform-tools
 
 export ANDROID_HOME=/home/svankina/my_apps/android-sdk-linux/

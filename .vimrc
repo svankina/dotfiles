@@ -161,8 +161,7 @@ nmap <F8> :TagbarToggle<CR>
 
 set lazyredraw          " redraw only when we need to.
 
-" jk is escape
-inoremap jk <esc>
+" kj is escape
 inoremap kj <esc>
 
 " move to beginning/end of line
@@ -230,6 +229,8 @@ nnoremap <leader>w :StripWhitespace<CR>:w<CR>
 let g:ctrlp_custom_ignore = {
     \ 'dir':  '/platforms',
     \ }
+
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 expandtab!
 "Remove annoying smartindent resetting to start of line when first character in line is #

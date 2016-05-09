@@ -87,4 +87,4 @@ source ~/.bash_aliases
 # Start tmux unless already started
 if [ "$TMUX" = "" ]; then tmux; fi
 
-export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+export JAVA_HOME=/home/svankina/my_apps/jdk1.8.0_92
