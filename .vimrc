@@ -253,3 +253,5 @@ nnoremap gl :ls<CR>
 
 " List all possible buffers with "gb" and accept a new buffer argument [1]
 nnoremap gb :ls<CR>:b
+
+nnoremap <leader>cpp i#include <iostream><CR>using namespace std;<CR><CR>int main() {<CR> return 0;<CR>}<Esc>kO
