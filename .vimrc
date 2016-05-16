@@ -53,6 +53,7 @@ NeoBundle 'sjl/gundo.vim'
 NeoBundle 'ntpeters/vim-better-whitespace'
 NeoBundle 'maksimr/vim-jsbeautify'
 NeoBundle 'Lokaltog/vim-distinguished'
+NeoBundle 'derekwyatt/vim-scala'
 
 let vimproc_updcmd = has('win64') ?
       \ 'tools\\update-dll-mingw 64' : 'tools\\update-dll-mingw 32'
