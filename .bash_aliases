@@ -93,6 +93,8 @@ alias p3='python3'
 alias t="v TODO"
 
 
+export SCALA_HOME=$HOME/my_apps/scala-2.11.8
+export PATH=$PATH:$SCALA_HOME/bin
 
 
 
