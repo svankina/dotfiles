@@ -256,3 +256,4 @@ nnoremap gl :ls<CR>
 nnoremap gb :ls<CR>:b
 
 nnoremap <leader>cp i#include <iostream><CR>using namespace std;<CR><CR>int main() {<CR> return 0;<CR>}<Esc>kO
+nnoremap <leader>pm o<Esc>Iif __name__=='__main__':<CR>
