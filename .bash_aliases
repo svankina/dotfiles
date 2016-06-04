@@ -93,9 +93,12 @@ alias p3='python3'
 alias t="v TODO"
 
 
+export MY_APPS=$HOME/my_apps
+export ASTUDIO_HOME=$HOME/my_apps/android-studio
 export SCALA_HOME=$HOME/my_apps/scala-2.11.8
-export PATH=$PATH:$SCALA_HOME/bin
+export NODE_HOME=$MY_APPS/node
+export PATH=$PATH:$SCALA_HOME/bin:$ASTUDIO_HOME/bin:$NODE_HOME/bin
 
-
+alias c='clear'
 
 # vim: set ft=sh
