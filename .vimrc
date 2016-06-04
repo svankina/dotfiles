@@ -157,7 +157,6 @@ vnoremap st :Strikethrough<CR>
 
 nnoremap <silent> <C-X> :NERDTreeToggle<CR>
 nnoremap <Tab> <C-W><C-W>
-nnoremap <silent> <C-B> :Bufferlist<CR>
 
 nmap <F8> :TagbarToggle<CR>
 
