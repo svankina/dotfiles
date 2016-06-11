@@ -85,6 +85,6 @@ source $ZSH/oh-my-zsh.sh
 source ~/.bash_aliases
 
 # Start tmux unless already started
-if [ "$TMUX" = "" ]; then tmux; fi
+if [ "$TMUX" = "" ]; then tmux -u -2; fi
 
 export JAVA_HOME=/home/svankina/my_apps/jdk1.8.0_92

@@ -99,6 +99,4 @@ export SCALA_HOME=$HOME/my_apps/scala-2.11.8
 export NODE_HOME=$MY_APPS/node
 export PATH=$PATH:$SCALA_HOME/bin:$ASTUDIO_HOME/bin:$NODE_HOME/bin
 
-alias c='clear'
-
 # vim: set ft=sh
