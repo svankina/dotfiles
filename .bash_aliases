@@ -40,7 +40,7 @@ export PATH="/home/svankina/opt/bin:/home/svankina/.local/bin:$PATH"
 
 export PYTHONPATH="$PYTHONPATH:~/.local/lib/python2.7/site-packages/"
 # Powerline
-source /home/svankina/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+#source /home/svankina/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 
 export EDITOR=vim
 
