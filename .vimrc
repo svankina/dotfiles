@@ -254,5 +254,8 @@ nnoremap gl :ls<CR>
 " List all possible buffers with "gb" and accept a new buffer argument [1]
 nnoremap gb :ls<CR>:b
 
-nnoremap <leader>cp i#include <iostream><CR>using namespace std;<CR><CR>int main() {<CR> return 0;<CR>}<Esc>kO
+nnoremap <leader>cp i#include <iostream><CR><CR>using namespace std;<CR><CR>int main() {<CR>return 0;<CR>}<Esc>kO
 nnoremap <leader>pm o<Esc>Iif __name__=='__main__':<CR>
+
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'

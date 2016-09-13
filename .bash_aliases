@@ -99,4 +99,8 @@ export SCALA_HOME=$HOME/my_apps/scala-2.11.8
 export NODE_HOME=$MY_APPS/node
 export PATH=$PATH:$SCALA_HOME/bin:$ASTUDIO_HOME/bin:$NODE_HOME/bin
 
+function gp {
+    g++ -std=c++11 $1 && ./a.out
+}
+
 # vim: set ft=sh
