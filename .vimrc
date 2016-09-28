@@ -258,3 +258,4 @@ nnoremap <leader>cp i#include <iostream><CR><CR>using namespace std;<CR><CR>int 
 nnoremap <leader>pm o<Esc>Iif __name__=='__main__':<CR>
 
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
+autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
