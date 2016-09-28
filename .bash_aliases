@@ -103,4 +103,8 @@ function gp {
     g++ -std=c++11 $1 && ./a.out
 }
 
+function mkcd {
+    mkdir $1 && cd $1
+}
+
 # vim: set ft=sh
