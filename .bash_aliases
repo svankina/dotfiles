@@ -100,11 +100,13 @@ export NODE_HOME=$MY_APPS/node
 export PATH=$PATH:$SCALA_HOME/bin:$ASTUDIO_HOME/bin:$NODE_HOME/bin
 
 function gp {
-    g++ -std=c++11 $1 && ./a.out
+    g++ -std=c++14 $1 && ./a.out
 }
 
 function mkcd {
     mkdir $1 && cd $1
 }
+
+alias g++='g++ -std=c++14'
 
 # vim: set ft=sh
