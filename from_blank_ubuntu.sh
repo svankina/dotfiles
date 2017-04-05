@@ -51,6 +51,14 @@ make && make install
 cd ../
 rm -rf htop
 
+wget https://github.com/powerline/fonts/archive/2015-12-04.tar.gz
+tar -xvf 2015-12-04.tar.gz
+cd fonts-2015-12-04
+./install.sh
+cd ..
+rm -rf fonts-2015-12-04
+
+
 cd $HOME
 
 mv $HOME/.bashrc $HOME/bashrc_backup

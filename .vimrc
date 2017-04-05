@@ -259,3 +259,7 @@ nnoremap <leader>pm o<Esc>Iif __name__=='__main__':<CR>
 
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
+
+
+"Python readInts
+inoremap <leader>rint<CR> map(int, raw_input().strip().split())<CR>
