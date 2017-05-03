@@ -109,4 +109,5 @@ function mkcd {
 
 alias g++='g++ -std=c++14'
 
+alias chromium-browser="/usr/bin/chromium-browser --disable-session-crashed-bubble --disable-infobars"
 # vim: set ft=sh

@@ -163,6 +163,7 @@ set lazyredraw          " redraw only when we need to.
 
 " kj is escape
 inoremap kj <esc>
+inoremap jk <esc>
 
 " move to beginning/end of line
 nnoremap B ^
