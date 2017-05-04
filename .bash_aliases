@@ -36,11 +36,11 @@ alias evim='vim ~/.vimrc'
 alias emux='vim ~/.tmux.conf'
 
 alias py='python'
-export PATH="/home/svankina/opt/bin:/home/svankina/.local/bin:$PATH"
+export PATH="$HOME/opt/bin:$HOME/.local/bin:$PATH"
 
 export PYTHONPATH="$PYTHONPATH:~/.local/lib/python2.7/site-packages/"
 # Powerline
-#source /home/svankina/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+#source $HOME/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 
 export EDITOR=vim
 
@@ -49,10 +49,10 @@ if [ -n "$VIRTUAL_ENV" ]; then
 fi
 
 export TERM=xterm-256color
-export PATH=${PATH}:/home/svankina/my_apps/jdk1.8.0_92/bin
-export PATH=${PATH}:/home/svankina/my_apps/android-sdk-linux/tools:/home/svankina/my_apps/android-sdk-linux/platform-tools
+export PATH=${PATH}:$HOME/my_apps/jdk1.8.0_92/bin
+export PATH=${PATH}:$HOME/my_apps/android-sdk-linux/tools:$HOME/my_apps/android-sdk-linux/platform-tools
 
-export ANDROID_HOME=/home/svankina/my_apps/android-sdk-linux/
+export ANDROID_HOME=$HOME/my_apps/android-sdk-linux/
 
 function x {
     xdg-open $1 > /dev/null 2>&1 &

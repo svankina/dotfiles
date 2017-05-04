@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/svankina/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -53,7 +53,7 @@ plugins=()
 
 # User configuration
 
-export PATH="/home/svankina/opt/bin:/home/svankina/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-7-openjdk-amd64/bin/:/home/svankina/my_apps/android-sdk-linux/tools"
+export PATH="$HOME/opt/bin:$HOME/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-7-openjdk-amd64/bin/:$HOME/my_apps/android-sdk-linux/tools"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -88,4 +88,4 @@ source ~/.bash_aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-#export JAVA_HOME=/home/svankina/my_apps/jdk1.8.0_92
+#export JAVA_HOME=$HOME/my_apps/jdk1.8.0_92

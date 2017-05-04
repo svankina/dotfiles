@@ -138,11 +138,11 @@ alias evim='vim ~/.vimrc'
 alias emux='vim ~/.tmux.conf'
 
 alias py='python'
-export PATH="/home/svankina/opt/bin:/home/svankina/.local/bin:$PATH"
+export PATH="$HOME/opt/bin:$HOME/.local/bin:$PATH"
 
 export PYTHONPATH="$PYTHONPATH:~/.local/lib/python2.7/site-packages/"
 # Powerline
-source /home/svankina/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+source $HOME/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 
 alias ezrc='vim ~/.zshrc'
 
@@ -174,8 +174,8 @@ alias q="echo -n 'q' > ~/.config/pianobar/ctl"
 
 export TERM=xterm-256color
 export PATH=${PATH}:/usr/lib/jvm/java-7-openjdk-amd64/bin/
-export PATH=${PATH}:/home/svankina/my_apps/android-sdk-linux/tools
-export ANDROID_HOME=/home/svankina/my_apps/android-sdk-linux/
+export PATH=${PATH}:$HOME/my_apps/android-sdk-linux/tools
+export ANDROID_HOME=$HOME/my_apps/android-sdk-linux/
 
 #alias xo='xdg-open'
 function x {

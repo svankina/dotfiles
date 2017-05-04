@@ -108,7 +108,7 @@ autocmd BufReadPost *
 let mapleader=","
 
 " Powerline
-set rtp+=/home/svankina/.local/lib/python2.7/site-packages/powerline/bindings/vim/
+set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 " Always show statusline
 set laststatus=2
 
