@@ -265,4 +265,4 @@ autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 "Python readInts
 inoremap <leader>rint map(int, raw_input().strip().split())
 
-nnoremap <leader>v v$:Strikethrough<CR>
+nnoremap <leader>v ^v$:Strikethrough<CR>
