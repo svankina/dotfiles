@@ -221,7 +221,8 @@ autocmd FileType perl set complete-=i
 nnoremap <space>/ :Ag<space>
 
 nnoremap Y y$
-set iskeyword+=-
+"Don't want annoyance with subtracions
+"set iskeyword+=-
 nnoremap <leader>w :StripWhitespace<CR>:w<CR>
 
 "zsh freaks out if this is on
@@ -263,6 +264,6 @@ autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 
 
 "Python readInts
-inoremap <leader>rint map(int, raw_input().strip().split())
+inoremap <leader>rint [int(_i) for _i in  raw_input().strip().split()]
 
 nnoremap <leader>v ^v$:Strikethrough<CR>
