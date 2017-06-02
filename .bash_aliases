@@ -110,4 +110,12 @@ function mkcd {
 alias g++='g++ -std=c++14'
 
 alias chromium-browser="/usr/bin/chromium-browser --disable-session-crashed-bubble --disable-infobars"
+
+function dbranch {
+    git branch -d $1 && git push origin ":$1"
+}
+
+function mbranch {
+    git checkout -b $1 && git push -u origin $1
+}
 # vim: set ft=sh
