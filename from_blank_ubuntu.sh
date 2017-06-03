@@ -5,9 +5,9 @@ set -e
 sudo apt-get install automake libevent-dev libncurses5-dev gnome-tweak-tool libncursesw5-dev dconf-editor git python-dev vim-gnome zsh trash-cli libtool autogen gfortran libreadline-dev -y
 
 #Configure git
-#git config --global user.name "Sravan Vankina"
-#git config --global user.email "spvankina@gmail.com"
-#git config --global push.default current
+git config --global user.name "Sravan Vankina"
+git config --global user.email "spvankina@gmail.com"
+git config --global push.default current
 
 cd $HOME
 
