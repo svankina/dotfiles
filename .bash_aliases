@@ -118,4 +118,7 @@ function dbranch {
 function mbranch {
     git checkout -b $1 && git push -u origin $1
 }
+alias q='$HOME/q/l32/q'
+alias studio='$HOME/my_apps/android-studio/bin/studio.sh > /dev/null 2>&1 &'
+
 # vim: set ft=sh
