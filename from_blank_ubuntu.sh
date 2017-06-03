@@ -17,25 +17,23 @@ cd my_apps
 
 #Install pip
 wget https://bootstrap.pypa.io/get-pip.py
-sudo python get-pip.py
+python get-pip.py --user
 rm get-pip.py
 
 #Install virtualenvwrapper
-sudo pip install virtualenvwrapper
+pip install virtualenvwrapper --user
 
 
 #Install powerline
 pip install --user powerline-status
 
 #Setup NeoBundle
-curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh
-sh install.sh
-rm install.sh
+curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
 
 #Install tmux
-wget https://github.com/tmux/tmux/releases/download/2.0/tmux-2.0.tar.gz
-tar -xvf tmux-2.0.tar.gz
-cd tmux-2.0
+wget https://github.com/tmux/tmux/releases/download/2.5/tmux-2.5.tar.gz
+tar -xvf tmux-2.5.tar.gz
+cd tmux-2.5
 ./configure --prefix=$HOME/.local
 make && make install
 cd ../
@@ -60,7 +58,8 @@ rm -rf fonts-2015-12-04
 
 cd $HOME
 
-mv $HOME/.bashrc $HOME/bashrc_backup
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 #Start setting up workspace
 mkdir ~/wksp
 cd wksp
@@ -72,4 +71,3 @@ vim +NeoBundleInstall +qall
 mv ~/.vim/bundle/xmledit/ftplugin/html.vim ~/.vim/bundle/xmledit/ftplugin/htmlvim_bak
 ln -s $HOME/.vim/bundle/xmledit/ftplugin/xml.vim $HOME/.vim/bundle/xmledit/ftplugin/html.vim
 
-#sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
