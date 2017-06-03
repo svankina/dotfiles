@@ -87,7 +87,6 @@ set statusline+=%3*%=%*                             " Set right-side status info
 set statusline+=%4*%l/%L:%v%*                       " Set <line number>/<total lines>:<column>
 set statusline+=%5*\ %*                             " Set ending space
 
-
 set hlsearch
 set incsearch
 set showcmd
@@ -109,6 +108,7 @@ let mapleader=","
 
 " Powerline
 set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
+
 " Always show statusline
 set laststatus=2
 
@@ -174,13 +174,6 @@ vnoremap E $
 " $/^ doesn't do anything
 nnoremap $ <nop>
 nnoremap ^ <nop>
-
-" edit and load vimrc bindings
-nnoremap <leader>ev :vsp $MYVIMRC<CR>
-nnoremap <leader>sv :source $MYVIMRC<CR>
-
-"nnoremap <leader>v :vsp<CR>
-
 
 "Motion over wrapped lines like normal editor.
 nnoremap j gj
