@@ -54,7 +54,7 @@ NeoBundle 'ntpeters/vim-better-whitespace'
 NeoBundle 'maksimr/vim-jsbeautify'
 NeoBundle 'Lokaltog/vim-distinguished'
 NeoBundle 'derekwyatt/vim-scala'
-
+NeoBundle 'junegunn/vim-easy-align'
 let vimproc_updcmd = has('win64') ?
       \ 'tools\\update-dll-mingw 64' : 'tools\\update-dll-mingw 32'
 execute "NeoBundle 'Shougo/vimproc.vim'," . string({
@@ -164,6 +164,9 @@ set lazyredraw          " redraw only when we need to.
 " kj is escape
 inoremap kj <esc>
 inoremap jk <esc>
+inoremap jx <esc>:x<CR>
+
+vnoremap <BS> <esc>
 
 " move to beginning/end of line
 nnoremap B ^
@@ -260,3 +263,9 @@ autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 inoremap <leader>rint [int(_i) for _i in  raw_input().strip().split()]
 
 nnoremap <leader>v ^v$:Strikethrough<CR>
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
