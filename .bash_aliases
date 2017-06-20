@@ -24,6 +24,7 @@ alias gco='git checkout'
 alias gs='git status'
 alias gf='ga $_'
 alias gcm='git commit -m'
+alias gp='git push'
 
 export WORKON_HOME=~/Envs
 source ~/.local/bin/virtualenvwrapper.sh
@@ -98,10 +99,6 @@ export ASTUDIO_HOME=$HOME/my_apps/android-studio
 export SCALA_HOME=$HOME/my_apps/scala-2.11.8
 export NODE_HOME=$MY_APPS/node
 export PATH=$PATH:$SCALA_HOME/bin:$ASTUDIO_HOME/bin:$NODE_HOME/bin
-
-function gp {
-    g++ -std=c++14 $1 && ./a.out
-}
 
 function mkcd {
     mkdir $1 && cd $1
