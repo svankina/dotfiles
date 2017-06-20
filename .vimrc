@@ -165,6 +165,7 @@ set lazyredraw          " redraw only when we need to.
 inoremap kj <esc>
 inoremap jk <esc>
 inoremap jx <esc>:x<CR>
+inoremap jw <esc>:w<CR>
 
 vnoremap <BS> <esc>
 
