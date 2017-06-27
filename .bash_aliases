@@ -23,8 +23,12 @@ alias gd='git diff'
 alias gco='git checkout'
 alias gs='git status'
 alias gf='ga $_'
-alias gcm='git commit -m'
 alias gp='git push'
+
+function gcm() {
+    local message="$@";
+    git commit -m "$message";
+}
 
 export WORKON_HOME=~/Envs
 source ~/.local/bin/virtualenvwrapper.sh
