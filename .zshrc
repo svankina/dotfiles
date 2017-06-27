@@ -63,7 +63,7 @@ if ! zplug check --verbose; then
 fi
 
 # Then, source plugins and add commands to $PATH
-zplug load --verbose
+zplug load
 
 # User configuration
 
@@ -94,7 +94,7 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 
 # Start tmux unless already started
-if [ "$TMUX" = "" ]; then tmux -u -2; fi
+#if [ "$TMUX" = "" ]; then tmux -u -2; fi
 
 source ~/.bash_aliases
 #
