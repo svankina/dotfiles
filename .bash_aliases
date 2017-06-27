@@ -117,4 +117,6 @@ alias studio='$HOME/my_apps/android-studio/bin/studio.sh > /dev/null 2>&1 &'
 alias sai='sudo apt install -y'
 alias sup="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && notify-send 'Done Updating'"
 
+alias ei3='v $HOME/.config/i3/config'
+
 # vim: set ft=sh
