@@ -84,9 +84,6 @@ alias ios='ionic serve'
 alias eps='v ~/.bash_personal'
 alias pys='python -m SimpleHTTPServer'
 alias eps='v ~/.bash_personal'
-alias tdi='$HOME/my_apps/cliist/cliist.py'
-alias iba='ionic build android'
-alias ira='ionic run android'
 
 alias geny='$HOME/my_apps/genymotion/genymotion'
 #eval $(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)
@@ -117,5 +114,7 @@ function mbranch {
 }
 alias q='$HOME/q/l32/q'
 alias studio='$HOME/my_apps/android-studio/bin/studio.sh > /dev/null 2>&1 &'
+alias sai='sudo apt install -y'
+alias sup="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && notify-send 'Done Updating'"
 
 # vim: set ft=sh
