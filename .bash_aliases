@@ -5,6 +5,7 @@ alias la='ls -lA'
 alias l='ls -ClFh --hide="*.pyc"'
 
 alias v='vim'
+alias c='cat'
 alias esrc='vim ~/.zshrc'
 alias src='source ~/.zshrc'
 
