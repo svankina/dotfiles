@@ -52,7 +52,6 @@ ZSH_THEME="agnoster"
 plugins=()
 
 source ~/.zplug/init.zsh
-zplug "MichaelAquilina/zsh-you-should-use"
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then

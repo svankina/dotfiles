@@ -19,13 +19,14 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+t exec i3-sensible-terminal
 
-# start chrome
+#Applications
+#Chrome
 bindsym $mod+c exec google-chrome
 bindsym $mod+Shift+c exec google-chrome --incognito
-
-#start pavucontrol
+#Clementine
+bindsym $mod+m exec clementine
+#Pavucontrol
 bindsym $mod+p exec pavucontrol
-
 
 # kill focused window
 bindsym $mod+Shift+q kill
