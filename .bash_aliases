@@ -124,4 +124,5 @@ alias sup="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && n
 
 alias ei3='v $HOME/.config/i3/config'
 alias cfg='/usr/bin/git --git-dir=$HOME/wksp/dotfiles --work-tree=$HOME'
+alias cfgu="cfg add -u && cfg commit -m 'updates' && cfg push"
 # vim: set ft=sh
