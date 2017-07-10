@@ -123,5 +123,5 @@ alias sai='sudo apt install -y'
 alias sup="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && notify-send 'Done Updating'"
 
 alias ei3='v $HOME/.config/i3/config'
-alias cfg='/usr/bin/git --git-dir=$HOME/.mycfg --work-tree=$HOME'
+alias cfg='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 # vim: set ft=sh
