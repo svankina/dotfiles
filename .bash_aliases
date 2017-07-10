@@ -128,11 +128,11 @@ alias cfgu="cfg add -u && cfg commit -m 'updates' && cfg push"
 #config config status.showUntrackedFiles no
 
 function sendfile() {
-    tar cfp - $1 | compress -c | nc -w 3 $2 1234
+    tar cfp - $1 | nc -w 3 $2 1234
 }
 
 function receive_file() {
-    nc -l -p 1234 | pv -b | uncompress -c | tar xvfp -
+    nc -l -p 1234 | pv -b | tar xvfp -
 }
 
 # vim: set ft=sh
