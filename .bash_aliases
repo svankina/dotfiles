@@ -135,4 +135,6 @@ function receive_file() {
     nc -l -p 1234 | pv -b | tar xvf -
 }
 
+alias epy='v ~/.config/polybar/config'
+
 # vim: set ft=sh
