@@ -6,10 +6,10 @@ noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
-imap <up> <Nop>
-imap <down> <Nop>
-imap <left> <Nop>
-imap <right> <Nop>
+inoremap <up> <Nop>
+inoremap <down> <Nop>
+inoremap <left> <Nop>
+inoremap <right> <Nop>
 
 set clipboard=unnamedplus
 
@@ -206,7 +206,7 @@ nnoremap tk  :tabprev<CR>
 nnoremap tl  :tablast<CR>
 
 nnoremap <C-t>     :tabnew<CR>
-nmap \l :setlocal number!<CR>
+nnoremap \l :set invnumber<CR>
 
 nnoremap <leader>r Ouse Reply;Reply->new(config => "$ENV{HOME}/.replyrc")->run;<Esc>
 nnoremap <leader>b koimport pdb;pdb.set_trace()<Esc>
@@ -253,7 +253,7 @@ nnoremap gl :ls<CR>
 " List all possible buffers with "gb" and accept a new buffer argument [1]
 nnoremap gb :ls<CR>:b
 
-nnoremap <leader>cp i#include <iostream><CR><CR>using namespace std;<CR><CR>int main() {<CR>return 0;<CR>}<Esc>kO
+"nnoremap <leader>cp i#include <iostream><CR><CR>using namespace std;<CR><CR>int main() {<CR>return 0;<CR>}<Esc>kO
 nnoremap <leader>pm o<Esc>Iif __name__=='__main__':<CR>
 
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'

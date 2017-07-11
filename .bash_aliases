@@ -83,8 +83,7 @@ export PATH=$PATH:$HOME/my_apps/my_scripts/
 alias cli='$HOME/my_apps/cliist/cliist.py'
 
 alias rm='trash-put'
-alias sai='sudo apt-get install --assume-yes'
-alias ios='ionic serve'
+alias sai='sudo apt install --assume-yes'
 
 alias eps='v ~/.bash_personal'
 alias pys='python -m SimpleHTTPServer'
