@@ -135,5 +135,6 @@ function receive_file() {
 }
 
 alias epy='v ~/.config/polybar/config'
+export DEFAULT_USER='svankina'
 
 # vim: set ft=sh

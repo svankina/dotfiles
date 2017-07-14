@@ -242,16 +242,16 @@ let g:syntastic_html_tidy_ignore_errors=[
 \]
 
 " Move to the previous buffer with "gp"
-nnoremap gp :bp<CR>
+nnoremap gl :bp<CR>
 
 " Move to the next buffer with "gn"
-nnoremap gn :bn<CR>
+nnoremap gh :bn<CR>
 
 " List all possible buffers with "gl"
-nnoremap gl :ls<CR>
+nnoremap gs :ls<CR>
 
 " List all possible buffers with "gb" and accept a new buffer argument [1]
-nnoremap gb :ls<CR>:b
+nnoremap gd :ls<CR>:b
 
 "nnoremap <leader>cp i#include <iostream><CR><CR>using namespace std;<CR><CR>int main() {<CR>return 0;<CR>}<Esc>kO
 nnoremap <leader>pm o<Esc>Iif __name__=='__main__':<CR>
