@@ -270,3 +270,6 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+let g:NERDCreateDefaultMappings = 0
+noremap ,c <C-o>:call NERDComment(0,"toggle")<C-m>
