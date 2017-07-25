@@ -62,6 +62,7 @@ export PATH="$HOME/opt/bin:$HOME/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+source ~/.bash_aliases
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -83,11 +84,16 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
+if [ "$TMUX" = "" ]; then
+    tmux set-environment VIRTUAL_ENV $VIRTUAL_ENV
+    tmux -u -2;
+fi
 
+if [ -n "$VIRTUAL_ENV" ]; then
+  . "$VIRTUAL_ENV/bin/activate"
+fi
 # Start tmux unless already started
-if [ "$TMUX" = "" ]; then tmux -u -2; fi
 
-source ~/.bash_aliases
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"

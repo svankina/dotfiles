@@ -113,8 +113,8 @@ set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 set laststatus=2
 
 " Visual indentantion selection remains after indent
-vnoremap > >gv
-vnoremap < <gv
+"vnoremap > >gv
+"vnoremap < <gv
 
 " Paste settings
 "map <F2> to do paste magic.
