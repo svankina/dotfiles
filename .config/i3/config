@@ -151,10 +151,10 @@ bindsym $mod+Pause exec --no-startup-id amixer -D pulse sset Master 10%+
 bindsym $mod+Scroll_Lock exec --no-startup-id amixer -D pulse sset Master 10%-
 bindsym $mod+Print exec --no-startup-id amixer -D pulse set Master 1+ toggle
 
-set $default_gaps_inner 10
-set $default_gaps_outer 5
-gaps inner $default_gaps_inner
-gaps outer $default_gaps_outer
+#set $default_gaps_inner 10
+#set $default_gaps_outer 5
+#gaps inner $default_gaps_inner
+#gaps outer $default_gaps_outer
 
 new_window 1pixel
 exec --no-startup-id /usr/bin/compton
