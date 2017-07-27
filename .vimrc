@@ -273,4 +273,4 @@ nmap ga <Plug>(EasyAlign)
 
 let g:NERDCreateDefaultMappings = 0
 nmap ,c <plug>NERDCommenterToggle
-vmap ,c <plug>NERDCommenterToggle gv
+vmap ,c <plug>NERDCommenterToggle

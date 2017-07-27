@@ -26,7 +26,7 @@ bindsym $mod+Shift+c exec google-chrome --incognito
 #Clementine
 bindsym $mod+m exec clementine
 #Pavucontrol
-bindsym $mod+p exec pavucontrol
+bindsym $mod+Shift+p exec pavucontrol
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -43,12 +43,6 @@ bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
 bindsym $mod+$right focus right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+$left move left
@@ -143,18 +137,6 @@ bindsym $mod+r mode "resize"
 #Natural Scrolling.
 exec --no-startup-id synclient HorizEdgeScroll=1 VertEdgeScroll=1 VertScrollDelta=-111
 
-#LG Rotated Left
-#exec --no-startup-id xrandr --output HDMI-0 --rotate left
-
-#Audio Controls
-bindsym $mod+Pause exec --no-startup-id amixer -D pulse sset Master 10%+
-bindsym $mod+Scroll_Lock exec --no-startup-id amixer -D pulse sset Master 10%-
-bindsym $mod+Print exec --no-startup-id amixer -D pulse set Master 1+ toggle
-
-#set $default_gaps_inner 10
-#set $default_gaps_outer 5
-#gaps inner $default_gaps_inner
-#gaps outer $default_gaps_outer
 
 new_window 1pixel
 exec --no-startup-id /usr/bin/compton
