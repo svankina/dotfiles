@@ -9,7 +9,6 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE='awesome-fontconfig'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir  virtualenv vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
-POWERLEVEL9K_HOME_SUB_ICON=''
 
 
 # Uncomment the following line to use case-sensitive completion.
@@ -58,7 +57,7 @@ plugins=()
 
 # User configuration
 
-export PATH="$HOME/opt/bin:$HOME/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-7-openjdk-amd64/bin/:$HOME/my_apps/android-sdk-linux/tools"
+export PATH="$HOME/opt/bin:$HOME/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/:$HOME/my_apps/android-sdk-linux/tools"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh

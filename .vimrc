@@ -55,6 +55,7 @@ NeoBundle 'maksimr/vim-jsbeautify'
 NeoBundle 'Lokaltog/vim-distinguished'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'junegunn/vim-easy-align'
+
 let vimproc_updcmd = has('win64') ?
       \ 'tools\\update-dll-mingw 64' : 'tools\\update-dll-mingw 32'
 execute "NeoBundle 'Shougo/vimproc.vim'," . string({

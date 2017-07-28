@@ -41,7 +41,7 @@ alias tl='tmux list-sessions'
 alias evim='vim ~/.vimrc'
 alias emux='vim ~/.tmux.conf'
 
-alias py='python'
+alias py='python -u'
 export PATH="$HOME/opt/bin:$HOME/.local/bin:$PATH"
 
 export PYTHONPATH="$PYTHONPATH:~/.local/lib/python2.7/site-packages/"
@@ -132,5 +132,4 @@ function receive_file() {
 
 alias epy='v ~/.config/polybar/config'
 export DEFAULT_USER='svankina'
-
 # vim: set ft=sh
