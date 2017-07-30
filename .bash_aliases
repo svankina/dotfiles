@@ -75,9 +75,6 @@ alias ctar='tar -czf'
 
 source ~/.bash_personal
 
-export PATH=$PATH:$HOME/my_apps/my_scripts/
-alias cli='$HOME/my_apps/cliist/cliist.py'
-
 alias rm='trash-put'
 alias sai='sudo apt install --assume-yes'
 
@@ -112,8 +109,7 @@ function dbranch {
 function mbranch {
     git checkout -b $1 && git push -u origin $1
 }
-alias q='$HOME/q/l32/q'
-alias studio='$HOME/my_apps/android-studio/bin/studio.sh > /dev/null 2>&1 &'
+
 alias sai='sudo apt install -y'
 alias sup="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && notify-send 'Done Updating'"
 
@@ -130,6 +126,5 @@ function receive_file() {
     nc -l -p 1234 | pv -b | tar xvf -
 }
 
-alias epy='v ~/.config/polybar/config'
 export DEFAULT_USER='svankina'
 # vim: set ft=sh
