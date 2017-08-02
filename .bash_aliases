@@ -9,15 +9,6 @@ alias c='vimcat'
 alias esrc='vim ~/.zshrc'
 alias src='source ~/.zshrc'
 
-#Open nautilus in background, silently.
-function nau() {
-(nautilus "$*" &) &> /dev/null
-}
-
-function slm() {
-(subl -b "$*" &) &> /dev/null
-}
-
 alias gpr='git pull --rebase'
 alias ga='git add'
 alias gd='git diff'
@@ -45,13 +36,10 @@ alias py='python -u'
 export PATH="$HOME/opt/bin:$HOME/.local/bin:$PATH"
 
 export PYTHONPATH="$PYTHONPATH:~/.local/lib/python2.7/site-packages/"
-# Powerline
-#source $HOME/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 
 export EDITOR=vim
 
 export TERM=xterm-256color
-export PATH=${PATH}:$HOME/my_apps/jdk1.8.0_92/bin
 export PATH=${PATH}:$HOME/my_apps/android-sdk-linux/tools:$HOME/my_apps/android-sdk-linux/platform-tools
 
 export ANDROID_HOME=$HOME/my_apps/android-sdk-linux/
@@ -68,8 +56,6 @@ alias elias='v ~/.bash_aliases'
 
 export PYTHONSTARTUP=~/.pythonrc
 
-alias windows='sudo grub-reboot 2 && sudo reboot'
-
 alias xtar='tar -xvf'
 alias ctar='tar -czf'
 
@@ -82,16 +68,7 @@ alias eps='v ~/.bash_personal'
 alias pys='python -m SimpleHTTPServer'
 alias eps='v ~/.bash_personal'
 
-alias geny='$HOME/my_apps/genymotion/genymotion'
-#eval $(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)
-alias p3='python3'
-
-
-export MY_APPS=$HOME/my_apps
 export ASTUDIO_HOME=$HOME/my_apps/android-studio
-export SCALA_HOME=$HOME/my_apps/scala-2.11.8
-export NODE_HOME=$MY_APPS/node
-export PATH=$PATH:$SCALA_HOME/bin:$ASTUDIO_HOME/bin:$NODE_HOME/bin
 
 function mkcd {
     mkdir $1 && cd $1
