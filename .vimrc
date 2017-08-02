@@ -241,7 +241,7 @@ let g:syntastic_html_tidy_ignore_errors=[
 \'proprietary attribute "ng-',
 \"<ion-", "</ion-"
 \]
-
+let g:syntastic_c_include_dirs=['$HOME/.local/include']
 " Move to the previous buffer with "gp"
 nnoremap gl :bp<CR>
 
@@ -257,9 +257,9 @@ nnoremap gd :ls<CR>:b
 "nnoremap <leader>cp i#include <iostream><CR><CR>using namespace std;<CR><CR>int main() {<CR>return 0;<CR>}<Esc>kO
 nnoremap <leader>pm o<Esc>Iif __name__=='__main__':<CR>
 
-let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
+let g:syntastic_cpp_compiler_options = '-std=c++11 -I /home/svankina/.local/include -I headers'
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
-
+let g:syntastic_c_include_dirs = ['/home/svankina/.local/include', '/home/svankina/.local/lib']
 
 "Python readInts
 inoremap <leader>rint [int(_i) for _i in  raw_input().strip().split()]

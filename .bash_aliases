@@ -5,7 +5,7 @@ alias la='ls -lA'
 alias l='ls -ClFh --hide="*.pyc"'
 
 alias v='vim'
-alias c='cat'
+alias c='vimcat'
 alias esrc='vim ~/.zshrc'
 alias src='source ~/.zshrc'
 
@@ -85,7 +85,6 @@ alias eps='v ~/.bash_personal'
 alias geny='$HOME/my_apps/genymotion/genymotion'
 #eval $(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)
 alias p3='python3'
-alias t="v TODO"
 
 
 export MY_APPS=$HOME/my_apps
@@ -127,4 +126,7 @@ function receive_file() {
 }
 
 export DEFAULT_USER='svankina'
+export PAGER=/usr/bin/vimpager
+alias less=$PAGER
+alias zless=$PAGER
 # vim: set ft=sh
