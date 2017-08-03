@@ -74,7 +74,7 @@ function mkcd {
     mkdir $1 && cd $1
 }
 
-alias g++='g++ -std=c++14'
+alias g+='g++ -std=c++14'
 
 alias chromium-browser="/usr/bin/chromium-browser --disable-session-crashed-bubble --disable-infobars"
 

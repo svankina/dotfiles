@@ -35,7 +35,6 @@ set runtimepath+=~/.vim/bundle/neobundle.vim/
 NeoBundle 'ervandew/supertab'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'fweep/vim-tabber'
 NeoBundle 'davidhalter/jedi-vim'
