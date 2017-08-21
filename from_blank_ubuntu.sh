@@ -66,7 +66,7 @@ cd wksp
 git clone git@github.com:svankina/dotfiles.git
 sh dotfiles/setup.sh
 
-vim +NeoBundleInstall +qall
+vim +PlugInstall +qall
 
 mv ~/.vim/bundle/xmledit/ftplugin/html.vim ~/.vim/bundle/xmledit/ftplugin/htmlvim_bak
 ln -s $HOME/.vim/bundle/xmledit/ftplugin/xml.vim $HOME/.vim/bundle/xmledit/ftplugin/html.vim

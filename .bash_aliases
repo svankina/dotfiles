@@ -63,6 +63,7 @@ source ~/.bash_personal
 
 alias rm='trash-put'
 alias sai='sudo apt install --assume-yes'
+alias pac='sudo pacman -Sy'
 
 alias eps='v ~/.bash_personal'
 alias pys='python -m SimpleHTTPServer'
