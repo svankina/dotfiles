@@ -33,7 +33,6 @@ alias evim='vim ~/.vimrc'
 alias emux='vim ~/.tmux.conf'
 
 alias py='python -u'
-export PATH="$HOME/opt/bin:$HOME/.local/bin:$PATH"
 
 export PYTHONPATH="$PYTHONPATH:~/.local/lib/python2.7/site-packages/"
 
@@ -63,7 +62,9 @@ source ~/.bash_personal
 
 alias rm='trash-put'
 alias sai='sudo apt install --assume-yes'
-alias pac='sudo pacman -Sy'
+alias pac='sudo pacman'
+alias pacs='pacman -Ss'
+alias paci='sudo pacman -Sy --noconfirm'
 
 alias eps='v ~/.bash_personal'
 alias pys='python -m SimpleHTTPServer'
@@ -77,7 +78,6 @@ function mkcd {
 
 alias g+='g++ -std=c++14'
 
-alias chromium-browser="/usr/bin/chromium-browser --disable-session-crashed-bubble --disable-infobars"
 
 function dbranch {
     git branch -d $1 && git push origin ":$1"
@@ -107,4 +107,6 @@ export DEFAULT_USER='svankina'
 export PAGER=/usr/bin/vimpager
 alias less=$PAGER
 alias zless=$PAGER
+alias yao='yaourt'
+alias t='v TODO'
 # vim: set ft=sh
