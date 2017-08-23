@@ -7,7 +7,7 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 inoremap <up> <Nop>
-inoremap <down> <Nop>
+inoremap <down> {
 inoremap <left> <Nop>
 inoremap <right> <Nop>
 
@@ -82,16 +82,11 @@ set rtp+=$HOME/.local/lib/python3.6/site-packages/powerline/bindings/vim/
 " Always show statusline
 set laststatus=2
 
-" Visual indentantion selection remains after indent
-"vnoremap > >gv
-"vnoremap < <gv
-
 " Paste settings
 "map <F2> to do paste magic.
 nmap <F2> :set paste<CR>i
 imap <F2> <ESC>:set paste<CR>i<Right>
 au InsertLeave * set nopaste
-
 
 " More natural splitting
 set splitbelow
@@ -188,8 +183,10 @@ autocmd FileType perl set complete-=i
 nnoremap <space>/ :Ag<space>
 
 nnoremap Y y$
+
 "Don't want annoyance with subtracions
 "set iskeyword+=-
+
 nnoremap <leader>w :StripWhitespace<CR>:w<CR>
 
 "zsh freaks out if this is on
@@ -204,13 +201,7 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 expandtab!
 "Remove annoying smartindent resetting to start of line when first character in line is #
 inoremap # X#
-nnoremap <leader>m @@
-"Syntastic ignore angular, ionic
-let g:syntastic_html_tidy_ignore_errors=[
-\'proprietary attribute "ng-',
-\"<ion-", "</ion-"
-\]
-let g:syntastic_c_include_dirs=['$HOME/.local/include']
+
 " Move to the previous buffer with "gp"
 nnoremap gl :bp<CR>
 
@@ -226,7 +217,7 @@ nnoremap gd :ls<CR>:b
 "nnoremap <leader>cp i#include <iostream><CR><CR>using namespace std;<CR><CR>int main() {<CR>return 0;<CR>}<Esc>kO
 nnoremap <leader>pm o<Esc>Iif __name__=='__main__':<CR>
 
-let g:syntastic_cpp_compiler_options = '-std=c++11 -I /home/svankina/.local/include -I headers'
+let g:syntastic_cpp_compiler_options = '-std=c++14 -I /home/svankina/.local/include -I headers'
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 let g:syntastic_c_include_dirs = ['/home/svankina/.local/include', '/home/svankina/.local/lib']
 
@@ -244,3 +235,7 @@ nmap ga <Plug>(EasyAlign)
 let g:NERDCreateDefaultMappings = 0
 nmap ,c <plug>NERDCommenterToggle
 vmap ,c <plug>NERDCommenterToggle
+
+let g:ycm_semantic_triggers = {
+\  'tex'  : ['\ref{','\cite{'],
+\ }

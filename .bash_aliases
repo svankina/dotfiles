@@ -71,6 +71,7 @@ alias pys='python -m SimpleHTTPServer'
 alias eps='v ~/.bash_personal'
 
 export ASTUDIO_HOME=$HOME/my_apps/android-studio
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
 
 function mkcd {
     mkdir $1 && cd $1
@@ -105,6 +106,7 @@ function receive_file() {
 
 export DEFAULT_USER='svankina'
 export PAGER=/usr/bin/vimpager
+export BROWSER=firefox
 alias less=$PAGER
 alias zless=$PAGER
 alias yao='yaourt'
