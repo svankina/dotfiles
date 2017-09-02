@@ -34,6 +34,8 @@ Plug 'vim-scripts/matchit.zip'
 Plug 'rking/ag.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'Lokaltog/vim-distinguished'
+Plug 'davidhalter/jedi-vim'
+Plug 'rdnetto/YCM-Generator',{'branch': 'stable'}
 
 call plug#end()
 
@@ -77,7 +79,7 @@ autocmd BufReadPost *
 let mapleader=","
 
 " Powerline
-set rtp+=$HOME/.local/lib/python3.6/site-packages/powerline/bindings/vim/
+set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 
 " Always show statusline
 set laststatus=2
@@ -239,3 +241,5 @@ vmap ,c <plug>NERDCommenterToggle
 let g:ycm_semantic_triggers = {
 \  'tex'  : ['\ref{','\cite{'],
 \ }
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+

@@ -17,12 +17,12 @@ set $right l
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+t exec termite
+bindsym $mod+t exec i3-sensible-terminal
 
 #Applications
 #Chrome
-bindsym $mod+c exec firefox
-bindsym $mod+Shift+c exec firefox --private-window
+bindsym $mod+c exec chromium-browser
+bindsym $mod+Shift+c exec chromium-browser --incognito
 #Clementine
 bindsym $mod+m exec clementine
 #Pavucontrol
@@ -136,10 +136,11 @@ bindsym $mod+r mode "resize"
 
 #Natural Scrolling.
 exec --no-startup-id synclient HorizEdgeScroll=1 VertEdgeScroll=1 VertScrollDelta=-111
-exec --no-startup-id xrandr --output VGA-1 --mode 1920x1080 --output HDMI-1 --mode 1920x1080 --above VGA-1
+exec --no-startup-id xrandr --output VGA-0 --mode 1920x1080 --output HDMI-0 --mode 1920x1080 --above VGA-0
 exec --no-startup-id nitrogen --restore &
 exec --no-startup-id xcape -e 'Control_R=Escape' -t 125
 exec --no-startup-id compton &
+exec --no-startup-id xfce4-panel --disable-wm-check
 
 
 new_window 1pixel
