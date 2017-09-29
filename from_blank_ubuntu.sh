@@ -1,19 +1,22 @@
 #Fail on error
 set -e
 
+
 #Libraries required by a lot of stuff
-sudo apt-get install automake libevent-dev libncurses5-dev gnome-tweak-tool libncursesw5-dev dconf-editor git python-dev vim-gnome zsh trash-cli libtool autogen gfortran libreadline-dev -y
+sudo apt-get install automake libevent-dev libncurses5-dev gnome-tweak-tool libncursesw5-dev dconf-editor git python-dev vim-gnome zsh trash-cli libtool autogen gfortran libreadline-dev i3 curl python3-dev cmake -y
 
 #Configure git
 git config --global user.name "Sravan Vankina"
 git config --global user.email "spvankina@gmail.com"
 git config --global push.default current
 
+ssh-keygen -t rsa -b 4096 -C "spvankina@gmail.com"
+
 cd $HOME
 
 #Setup my custom builds
-mkdir my_apps
-cd my_apps
+mkdir tmp
+cd tmp
 
 #Install pip
 wget https://bootstrap.pypa.io/get-pip.py
@@ -22,13 +25,12 @@ rm get-pip.py
 
 #Install virtualenvwrapper
 pip install virtualenvwrapper --user
-
-
 #Install powerline
 pip install --user powerline-status
 
-#Setup NeoBundle
-curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
+#Setup Vim-Plug
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 #Install tmux
 wget https://github.com/tmux/tmux/releases/download/2.5/tmux-2.5.tar.gz
@@ -48,12 +50,11 @@ make && make install
 cd ../
 rm -rf htop
 
-wget https://github.com/powerline/fonts/archive/2015-12-04.tar.gz
-tar -xvf 2015-12-04.tar.gz
-cd fonts-2015-12-04
+git clone https://github.com/powerline/fonts.git
+cd fonts
 ./install.sh
 cd ..
-rm -rf fonts-2015-12-04
+rm -rf fonts
 
 
 cd $HOME
@@ -67,7 +68,7 @@ git clone git@github.com:svankina/dotfiles.git
 sh dotfiles/setup.sh
 
 vim +PlugInstall +qall
+cd ~/.vim/plugged/YouCompleteMe
+./install.py --clang-completer
 
-mv ~/.vim/bundle/xmledit/ftplugin/html.vim ~/.vim/bundle/xmledit/ftplugin/htmlvim_bak
-ln -s $HOME/.vim/bundle/xmledit/ftplugin/xml.vim $HOME/.vim/bundle/xmledit/ftplugin/html.vim
-
+sudo sh -c 'printf "[SeatDefaults]\nallow-guest=false\n" > /etc/lightdm/lightdm.conf.d/50-no-guest.conf'
