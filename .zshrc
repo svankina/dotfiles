@@ -17,4 +17,4 @@ bindkey '^R' history-incremental-search-backward
 #Prompt
 autoload -U colors && colors
 #Overwrite PS1
-PS1="%{$fg_bold[red]%}%n$fg_bold[white] 🜨 $fg_bold[blue]%2~%\ $fg_bold[yellow]%}₿%{$reset_color%} % "
+PS1="%{$fg_bold[red]%}%n$fg_bold[white] 🜨 $fg_bold[blue]%2~%\ $fg_bold[yellow]%}$%{$reset_color%} % "
