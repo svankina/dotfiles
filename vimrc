@@ -241,5 +241,5 @@ vmap ,c <plug>NERDCommenterToggle
 let g:ycm_semantic_triggers = {
 \  'tex'  : ['\ref{','\cite{'],
 \ }
-let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
