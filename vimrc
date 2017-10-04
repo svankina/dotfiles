@@ -39,6 +39,7 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'Lokaltog/vim-distinguished'
 Plug 'davidhalter/jedi-vim'
 Plug 'rdnetto/YCM-Generator',{'branch': 'stable'}
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 call plug#end()
 

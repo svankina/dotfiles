@@ -11,10 +11,11 @@ HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.zsh_history
 
-#bindkey -v
-bindkey '^R' history-incremental-search-backward
+bindkey -v
 
 #Prompt
 autoload -U colors && colors
 #Overwrite PS1
 PS1="%{$fg_bold[red]%}%n$fg_bold[white] 🜨 $fg_bold[blue]%2~%\ $fg_bold[yellow]%}$%{$reset_color%} % "
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
