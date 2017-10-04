@@ -1,6 +1,8 @@
 #Fail on error
 set -e
 
+mkdir -p ~/.vim/backup
+
 
 #Libraries required by a lot of stuff
 sudo apt-get install automake libevent-dev libncurses5-dev gnome-tweak-tool libncursesw5-dev dconf-editor git python-dev vim-gnome zsh trash-cli libtool autogen gfortran libreadline-dev i3 curl python3-dev cmake -y
@@ -69,6 +71,6 @@ sh dotfiles/setup.sh
 
 vim +PlugInstall +qall
 cd ~/.vim/plugged/YouCompleteMe
-./install.py --clang-completer
+./install.py --clang-completer gcc
 
 sudo sh -c 'printf "[SeatDefaults]\nallow-guest=false\n" > /etc/lightdm/lightdm.conf.d/50-no-guest.conf'

@@ -1,5 +1,8 @@
 " Use 256 colours
 set t_Co=256
+set backup
+set backupdir=~/.vim/backup
+set dir=~/.vim/backup
 
 noremap ; :
 noremap <Up> <Nop>
