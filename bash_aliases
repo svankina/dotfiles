@@ -111,4 +111,5 @@ alias less=$PAGER
 alias zless=$PAGER
 alias yao='yaourt'
 alias t='v TODO'
+alias mmi="make && make install && notify-send 'Done installing'"
 # vim: set ft=sh
