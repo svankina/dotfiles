@@ -190,3 +190,5 @@ alias windows='sudo grub-reboot 2 && sudo reboot'
 
 alias xtar='tar -xvf'
 alias ctar='tar -czf'
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
