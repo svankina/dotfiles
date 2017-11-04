@@ -39,6 +39,7 @@ Plug 'Lokaltog/vim-distinguished'
 Plug 'davidhalter/jedi-vim'
 Plug 'rdnetto/YCM-Generator',{'branch': 'stable'}
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'othree/html5.vim'
 
 call plug#end()
 
@@ -247,3 +248,5 @@ let g:ycm_semantic_triggers = {
 let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 
+map j gj
+map k gk
