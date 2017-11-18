@@ -112,4 +112,5 @@ alias zless=$PAGER
 alias yao='yaourt'
 alias t='v TODO'
 alias mmi="make && make install && notify-send 'Done installing'"
+alias _='sudo'
 # vim: set ft=sh
