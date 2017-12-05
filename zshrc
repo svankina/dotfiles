@@ -20,4 +20,8 @@ PS1="%{$fg_bold[red]%}%n$fg_bold[white] 🜨 $fg_bold[blue]%2~%\ $fg_bold[yellow
 
 if [ "$TMUX" = "" ]; then tmux; fi
 
+if [ -n "$VIRTUAL_ENV" ]; then
+    source $VIRTUAL_ENV/bin/activate;
+fi
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

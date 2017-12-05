@@ -125,7 +125,6 @@ vnoremap ul :Underline<CR>
 vnoremap dul :DoubleUnderline<CR>
 vnoremap st :Strikethrough<CR>
 
-nnoremap <silent> <C-X> :NERDTreeToggle<CR>
 nnoremap <Tab> <C-W><C-W>
 
 nmap <F8> :TagbarToggle<CR>
@@ -250,3 +249,4 @@ let g:ycm_confirm_extra_conf = 0
 
 map j gj
 map k gk
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'

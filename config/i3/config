@@ -1,6 +1,6 @@
 set $mod Mod4
 
-bindsym $mod+Mod1+l exec dm-tool lock
+bindsym $mod+Mod1+l exec i3lock
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -137,7 +137,7 @@ bindsym $mod+r mode "resize"
 #Natural Scrolling.
 exec --no-startup-id synclient HorizEdgeScroll=1 VertEdgeScroll=1 VertScrollDelta=-111
 #exec --no-startup-id xrandr --output VGA1 --mode 1920x1080 --output HDMI-0 --mode 1920x1080 --above VGA-0
-exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080 --output DP-1 1920x1080 --right-of eDP-1
+exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080 --right-of DP-1
 exec --no-startup-id nitrogen --restore &
 exec --no-startup-id xcape -e 'Control_R=Escape' -t 125
 exec --no-startup-id compton &
