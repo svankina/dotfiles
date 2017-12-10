@@ -40,6 +40,7 @@ Plug 'davidhalter/jedi-vim'
 Plug 'rdnetto/YCM-Generator',{'branch': 'stable'}
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'othree/html5.vim'
+Plug 'tomlion/vim-solidity'
 
 call plug#end()
 
@@ -249,4 +250,4 @@ let g:ycm_confirm_extra_conf = 0
 
 map j gj
 map k gk
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+"let $FZF_DEFAULT_COMMAND = 'ag -g ""'

@@ -38,6 +38,8 @@ export PYTHONPATH="$PYTHONPATH:~/.local/lib/python2.7/site-packages/"
 
 export EDITOR=vim
 
+export PATH=$PATH:/usr/local/go/bin
+
 export TERM=xterm-256color
 export PATH=${PATH}:$HOME/my_apps/android-sdk-linux/tools:$HOME/my_apps/android-sdk-linux/platform-tools
 
@@ -113,4 +115,5 @@ alias yao='yaourt'
 alias t='v todo.txt'
 alias mmi="make && make install && notify-send 'Done installing'"
 alias _='sudo'
+alias geta='geth attach http://localhost:8545'
 # vim: set ft=sh
