@@ -41,6 +41,8 @@ Plug 'rdnetto/YCM-Generator',{'branch': 'stable'}
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'othree/html5.vim'
 Plug 'tomlion/vim-solidity'
+Plug 'alvan/vim-closetag'
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
