@@ -11,7 +11,7 @@ HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.zsh_history
 
-bindkey -v
+#bindkey -v
 
 #Prompt
 autoload -U colors && colors
