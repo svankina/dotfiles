@@ -142,6 +142,7 @@ exec --no-startup-id nitrogen --restore &
 exec --no-startup-id xcape -e 'Control_R=Escape' -t 125
 exec --no-startup-id compton &
 exec --no-startup-id xfce4-panel --disable-wm-check
+exec --no-startup-id nm-applet
 
 
 new_window 1pixel
