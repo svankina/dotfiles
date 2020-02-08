@@ -27,19 +27,15 @@ function gcm() {
 #export WORKON_HOME=~/Envs
 #source ~/.local/bin/virtualenvwrapper.sh
 
-alias tm='tmux -u -2'
+alias tm='tmux -u'
 alias ta='tmux attach'
 alias td='tmux detach'
 alias tl='tmux list-sessions'
 alias evim='vim ~/.vimrc'
 alias emux='vim ~/.tmux.conf'
-
 alias py='python -u'
 
-export PYTHONPATH="$PYTHONPATH:~/.local/lib/python2.7/site-packages/"
-
 export EDITOR=vim
-
 export PATH=$PATH:/usr/local/go/bin
 
 export TERM=xterm-256color
