@@ -3,6 +3,7 @@ alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias la='ls -lA'
 alias l='ls -ClFh --hide="*.pyc"'
+alias lh='ls -lAhrt'
 
 alias v='vim'
 alias c='vimcat'
@@ -41,7 +42,7 @@ export EDITOR=vim
 export PATH=$PATH:/usr/local/go/bin
 
 export TERM=xterm-256color
-export PATH=${PATH}:$HOME/my_apps/android-sdk-linux/tools:$HOME/my_apps/android-sdk-linux/platform-tools
+export PATH=${PATH}:$HOME/my_apps/android-sdk-linux/emulator:$HOME/my_apps/android-sdk-linux/tools:$HOME/my_apps/android-sdk-linux/platform-tools
 
 export ANDROID_HOME=$HOME/my_apps/android-sdk-linux/
 
@@ -58,24 +59,26 @@ alias elias='v ~/.bash_aliases'
 export PYTHONSTARTUP=~/.pythonrc
 
 alias xtar='tar -xvf'
-alias ctar='tar -czf'
+alias ctar='tar -cvzf'
 
 source ~/.bash_personal
 
 alias rm='trash-put'
 alias sai='sudo apt install --assume-yes'
-alias pac='sudo pacman'
-alias pacs='pacman -Ss'
-alias paci='sudo pacman -Sy --noconfirm'
+
+#Arch
+#alias pac='sudo pacman'
+#alias pacs='pacman -Ss'
+#alias paci='sudo pacman -Sy --noconfirm'
 
 alias eps='v ~/.bash_personal'
 alias pys='python -m SimpleHTTPServer'
 alias eps='v ~/.bash_personal'
 
 export ASTUDIO_HOME=$HOME/my_apps/android-studio
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 
-function mkcd {
+function mc {
     mkdir $1 && cd $1
 }
 
@@ -99,16 +102,20 @@ alias cfgu="cfg add -u && cfg commit -m 'updates' && cfg push"
 #config config status.showUntrackedFiles no
 
 function sendfile() {
-    tar cf - $1 | nc -w 3 $2 1234
+    tar cvf - $1 | nc -w 3 $2 1234
 }
 
 function receive_file() {
     nc -l -p 1234 | pv -b | tar xvf -
 }
 
+function prog() {
+    echo "$@ & progress -mp $!"
+}
+
 export DEFAULT_USER='svankina'
 export PAGER=/usr/bin/vimpager
-export BROWSER=firefox
+export BROWSER=chromium
 alias less=$PAGER
 alias zless=$PAGER
 alias yao='yaourt'
@@ -116,4 +123,7 @@ alias t='v todo.txt'
 alias mmi="make && make install && notify-send 'Done installing'"
 alias _='sudo'
 alias geta='geth attach http://localhost:8545'
+alias p3='python3'
+export PYTHONWARNINGS="ignore"
+
 # vim: set ft=sh
