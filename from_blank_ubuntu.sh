@@ -5,7 +5,7 @@ mkdir -p ~/.vim/backup
 
 
 #Libraries required by a lot of stuff
-sudo apt-get install automake libevent-dev libncurses5-dev gnome-tweak-tool libncursesw5-dev dconf-editor git python-dev vim-gnome zsh trash-cli libtool autogen gfortran libreadline-dev i3 curl python3-dev cmake -y
+sudo apt-get install automake libevent-dev libncurses5-dev gnome-tweak-tool libncursesw5-dev dconf-editor git python-dev vim-gnome zsh trash-cli libtool autogen gfortran libreadline-dev i3 curl python3-dev cmake direnv -y
 
 #Configure git
 git config --global user.name "Sravan Vankina"
@@ -26,7 +26,8 @@ python get-pip.py --user
 rm get-pip.py
 
 #Install virtualenvwrapper
-pip install virtualenvwrapper --user
+#pip install virtualenvwrapper --user
+
 #Install powerline
 pip install --user powerline-status
 

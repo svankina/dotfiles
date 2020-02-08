@@ -23,9 +23,9 @@ function gcm() {
     git commit -m "$message";
 }
 
-export VIRTUALENV_PYTHON=python3
-export WORKON_HOME=~/Envs
-source ~/.local/bin/virtualenvwrapper.sh
+#export VIRTUALENV_PYTHON=python3
+#export WORKON_HOME=~/Envs
+#source ~/.local/bin/virtualenvwrapper.sh
 
 alias tm='tmux -u -2'
 alias ta='tmux attach'
