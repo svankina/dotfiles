@@ -23,6 +23,7 @@ function gcm() {
     git commit -m "$message";
 }
 
+export VIRTUALENV_PYTHON=python3
 export WORKON_HOME=~/Envs
 source ~/.local/bin/virtualenvwrapper.sh
 
