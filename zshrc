@@ -17,11 +17,7 @@ HISTFILE=~/.zsh_history
 bindkey -e
 
 
-export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libgtk3-nocsd.so.0
-autoload bashcompinit
-bashcompinit
-eval "$(register-python-argcomplete pmbootstrap)"
-
+#export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libgtk3-nocsd.so.0
 
 #Prompt
 autoload -U colors && colors
