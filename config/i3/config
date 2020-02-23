@@ -127,33 +127,25 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-#bar {
-    #status_command i3blocks
-    #font pango:PowerlineFont 12
-#}
 
 #Natural Scrolling.
-#exec --no-startup-id synclient HorizEdgeScroll=1 VertEdgeScroll=1 VertScrollDelta=-111
-#exec --no-startup-id synclient NaturalScrolling=1 VertScrollDelta=-113
 exec --no-startup-id synclient VertScroll=-79
-#exec --no-startup-id xrandr --output VGA1 --mode 1920x1080 --output HDMI-0 --mode 1920x1080 --above VGA-0
-exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080 --right-of DP-1
+
+#Desktop background manager
 exec --no-startup-id nitrogen --restore &
-exec --no-startup-id xcape -e 'Control_R=Escape' -t 125
+#Remap Ctrl is escape when tappeld
+exec --no-startup-id xcape -e 'Control_L=Escape' -t 125
 exec --no-startup-id compton &
 exec --no-startup-id xfce4-panel --disable-wm-check
 exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
 
-
 new_window 1pixel
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +10%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -10%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q -D pulse sset Master 10%+
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q -D pulse sset Master 10%-
+bindsym XF86AudioMute exec --no-startup-id amixer -q -D pulse sset Master toggle
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
