@@ -29,7 +29,6 @@ Plug 'valloric/YouCompleteMe'
 Plug 'scrooloose/nerdcommenter'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-fugitive'
-Plug 'vim-scripts/openssl.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'vim-scripts/matchit.zip'
@@ -43,6 +42,8 @@ Plug 'othree/html5.vim'
 Plug 'tomlion/vim-solidity'
 Plug 'alvan/vim-closetag'
 Plug 'jiangmiao/auto-pairs'
+Plug 'nvie/vim-flake8'
+Plug 'vim-scripts/AnsiEsc.vim'
 
 call plug#end()
 
@@ -86,7 +87,7 @@ autocmd BufReadPost *
 let mapleader=","
 
 " Powerline
-set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
+set rtp+=$HOME/.local/lib/python3.6/site-packages/powerline/bindings/vim/
 
 " Always show statusline
 set laststatus=2
@@ -135,7 +136,6 @@ nmap <F8> :TagbarToggle<CR>
 set lazyredraw          " redraw only when we need to.
 
 " kj is escape
-inoremap kj <esc>
 inoremap jk <esc>
 inoremap jx <esc>:x<CR>
 inoremap jw <esc>:w<CR>
@@ -164,7 +164,7 @@ set fillchars=vert:│    " Nicer split separation character.
 nnoremap <silent> <CR> :nohlsearch<CR><CR>
 
 "Toggle spellcheck.
-nnoremap <F7> :setlocal spell! spell?<CR>
+nnoremap <F5> :setlocal spell! spell?<CR>
 
 "Format JSON
 command -nargs=* JSON %!python -m json.tool <args>
@@ -182,7 +182,7 @@ nnoremap <C-p> :FZF<CR>
 nnoremap \l :set invnumber<CR>
 
 nnoremap <leader>r Ouse Reply;Reply->new(config => "$ENV{HOME}/.replyrc")->run;<Esc>
-nnoremap <leader>b koimport pdb;pdb.set_trace()<Esc>
+nnoremap <leader>b koimport pdb; pdb.set_trace()<Esc>
 cnoreabbrev ag Ag
 
 "Avoid huge cost of traversing perl libs for completion.
@@ -232,6 +232,10 @@ let g:syntastic_c_include_dirs = ['/home/svankina/.local/include', '/home/svanki
 "Python readInts
 inoremap <leader>rint [int(_i) for _i in  raw_input().strip().split()]
 
+inoremap <leader>c ✔️
+inoremap <leader>d ❌
+inoremap <leader>a ⭐
+
 nnoremap <leader>v ^v$:Strikethrough<CR>
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
@@ -253,3 +257,9 @@ let g:ycm_confirm_extra_conf = 0
 map j gj
 map k gk
 "let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+
+function! TerminalPreviewMarkdown()
+	new % | terminal ! mdv %
+endfu
+
+map <silent> <leader>m :call TerminalPreviewMarkdown()<CR>

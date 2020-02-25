@@ -1,4 +1,5 @@
 # some more ls aliases
+export TERMINAL=gnome-terminal
 alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias la='ls -lA'
@@ -27,10 +28,17 @@ function gcm() {
 #export WORKON_HOME=~/Envs
 #source ~/.local/bin/virtualenvwrapper.sh
 
-alias tm='tmux -u'
-alias ta='tmux attach'
-alias td='tmux detach'
-alias tl='tmux list-sessions'
+#alias tm='tmux -u'
+#alias ta='tmux attach'
+#alias td='tmux detach'
+#alias tl='tmux list-sessions'
+alias ta='todolist add'
+alias tl='todolist list'
+alias tmc='todolist mark complete'
+alias tma='todolist mark active'
+alias tmo='todolist mark open'
+alias tmf='todolist mark failed'
+alias te='todolist edit'
 alias evim='vim ~/.vimrc'
 alias emux='vim ~/.tmux.conf'
 alias py='python -u'
@@ -39,9 +47,6 @@ export EDITOR=vim
 export PATH=$PATH:/usr/local/go/bin
 
 export TERM=xterm-256color
-export PATH=${PATH}:$HOME/my_apps/android-sdk-linux/emulator:$HOME/my_apps/android-sdk-linux/tools:$HOME/my_apps/android-sdk-linux/platform-tools
-
-export ANDROID_HOME=$HOME/my_apps/android-sdk-linux/
 
 function x {
     xdg-open $1 > /dev/null 2>&1 &
@@ -63,16 +68,9 @@ source ~/.bash_personal
 alias rm='trash-put'
 alias sai='sudo apt install --assume-yes'
 
-#Arch
-#alias pac='sudo pacman'
-#alias pacs='pacman -Ss'
-#alias paci='sudo pacman -Sy --noconfirm'
-
 alias eps='v ~/.bash_personal'
-alias pys='python -m SimpleHTTPServer'
 alias eps='v ~/.bash_personal'
 
-export ASTUDIO_HOME=$HOME/my_apps/android-studio
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 
 function mc {
@@ -121,6 +119,38 @@ alias mmi="make && make install && notify-send 'Done installing'"
 alias _='sudo'
 alias geta='geth attach http://localhost:8545'
 alias p3='python3'
-export PYTHONWARNINGS="ignore"
+#export PYTHONWARNINGS="ignore"
+
+export CUDAROOT=/usr/local/cuda-10.2
+export PATH=$PATH:$CUDAROOT/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CUDAROOT/lib64
+alias ipy='ipython'
+alias wh='which'
+alias sudo='sudo '
+alias docker='sudo docker'
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/svankina/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/svankina/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/svankina/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/svankina/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+function ctarp () {
+tar cf - $1 -P | pv -s $(du -sb $1 | awk '{print $1}') | gzip > $2
+}
+
+function pipa () {
+    pip install $1 && echo $1 >> requirements.txt
+}
 
 # vim: set ft=sh

@@ -1,9 +1,10 @@
-ln -s /home/svankina/wksp/dotfiles/bash_aliases /home/svankina/.bash_aliases
-ln -s /home/svankina/wksp/dotfiles/bashrc /home/svankina/.bashrc
-ln -s /home/svankina/wksp/dotfiles/pdbrc /home/svankina/.pdbrc
-ln -s /home/svankina/wksp/dotfiles/pythonrc /home/svankina/.pythonrc
-ln -s /home/svankina/wksp/dotfiles/tmux.conf /home/svankina/.tmux.conf
-ln -s /home/svankina/wksp/dotfiles/vimrc /home/svankina/.vimrc
-ln -s /home/svankina/wksp/dotfiles/xinitrc /home/svankina/.xinitrc
-ln -s /home/svankina/wksp/dotfiles/zshrc /home/svankina/.zshrc
-ln -s /home/svankina/wksp/dotfiles/config/i3/config /home/svankina/.config/i3/config
+ln -s ~/src/dotfiles/bash_aliases ~/.bash_aliases
+ln -s ~/src/dotfiles/pdbrc ~/.pdbrc
+ln -s ~/src/dotfiles/pythonrc ~/.pythonrc
+ln -s ~/src/dotfiles/tmux.conf ~/.tmux.conf
+ln -s ~/src/dotfiles/vimrc ~/.vimrc
+ln -s ~/src/dotfiles/xinitrc ~/.xinitrc
+rm ~/.zshrc
+ln -s ~/src/dotfiles/zshrc ~/.zshrc
+ln -s ~/src/dotfiles/config/i3/config ~/.config/i3/config
+touch ~/.bash_personal
