@@ -135,10 +135,11 @@ exec --no-startup-id synclient VertScroll=-79
 exec --no-startup-id nitrogen --restore &
 #Remap Ctrl is escape when tappeld
 exec --no-startup-id xcape -e 'Control_L=Escape' -t 125
+
 exec --no-startup-id compton &
 exec --no-startup-id xfce4-panel --disable-wm-check
 exec --no-startup-id nm-applet
-exec --no-startup-id blueman-applet
+#exec --no-startup-id blueman-applet
 
 new_window 1pixel
 
