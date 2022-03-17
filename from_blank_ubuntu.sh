@@ -5,14 +5,15 @@ mkdir -p ~/.vim/backup
 
 
 #Libraries required by a lot of stuff
-sudo apt-get install automake libevent-dev libncurses5-dev gnome-tweak-tool libncursesw5-dev dconf-editor git python-dev vim-gnome zsh trash-cli libtool autogen gfortran libreadline-dev i3 curl python3-dev cmake direnv xsel-y
+sudo apt-get install automake libevent-dev libncurses5-dev gnome-tweak-tool libncursesw5-dev dconf-editor git python-dev zsh trash-cli libtool autogen gfortran libreadline-dev i3 curl python3-dev cmake direnv xsel vim-gtk3 build-essential -y
+
 
 #Configure git
 git config --global user.name "Sravan Vankina"
 git config --global user.email "spvankina@gmail.com"
 git config --global push.default current
 
-ssh-keygen -t rsa -b 4096 -C "spvankina@gmail.com"
+ssh-keygen -t ed25519 -C "spvankina@gmail.com"
 
 cd $HOME
 
@@ -54,6 +55,5 @@ sh dotfiles/setup.sh
 
 vim +PlugInstall +qall
 cd ~/.vim/plugged/YouCompleteMe
-./install.py --clang-completer gcc
+./install.py --clang-completer
 
-sudo sh -c 'printf "[SeatDefaults]\nallow-guest=false\n" > /etc/lightdm/lightdm.conf.d/50-no-guest.conf'
