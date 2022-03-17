@@ -5,7 +5,7 @@ mkdir -p ~/.vim/backup
 
 
 #Libraries required by a lot of stuff
-sudo apt-get install automake libevent-dev libncurses5-dev gnome-tweak-tool libncursesw5-dev dconf-editor git python-dev zsh trash-cli libtool autogen gfortran libreadline-dev i3 curl python3-dev cmake direnv xsel vim-gtk3 build-essential tmux htop -y
+sudo apt-get install automake libevent-dev libncurses5-dev gnome-tweak-tool libncursesw5-dev dconf-editor git python-dev zsh trash-cli libtool autogen gfortran libreadline-dev i3 curl python3-dev cmake direnv xsel vim-gtk3 build-essential tmux htop nitrogen compton -y
 
 
 #Configure git

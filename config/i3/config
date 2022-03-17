@@ -21,8 +21,8 @@ bindsym $mod+t exec i3-sensible-terminal
 
 #Applications
 #Chrome
-bindsym $mod+c exec chromium-browser
-bindsym $mod+Shift+c exec chromium-browser --incognito
+bindsym $mod+c exec firefox
+bindsym $mod+Shift+c exec firefox --private-window
 #Clementine
 bindsym $mod+m exec clementine
 #Pavucontrol
