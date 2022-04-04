@@ -6,7 +6,7 @@ export PATH="$HOME/.local/bin:$PATH"
 source ~/.bash_aliases
 export EDITOR='vim'
 if [ "$TMUX" = "" ]; then
-    tmux;
+    tmux -u;
 fi
 
 #Command History
