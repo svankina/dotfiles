@@ -87,7 +87,7 @@ autocmd BufReadPost *
 let mapleader=","
 
 " Powerline
-set rtp+=$HOME/.local/lib/python3.8/site-packages/powerline/bindings/vim/
+set rtp+=$HOME/.local/lib/python3.10/site-packages/powerline/bindings/vim/
 
 " Always show statusline
 set laststatus=2
@@ -167,8 +167,8 @@ nnoremap <silent> <CR> :nohlsearch<CR><CR>
 nnoremap <F5> :setlocal spell! spell?<CR>
 
 "Format JSON
-command -nargs=* JSON %!python -m json.tool <args>
-vnoremap <leader>json !python -m json.tool<CR>
+command -nargs=* JSON %!python3 -m json.tool <args>
+vnoremap <leader>json !python3 -m json.tool<CR>
 
 inoremap {<CR> {<CR>}<Esc>O
 

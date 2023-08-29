@@ -41,7 +41,7 @@ alias tmf='todolist mark failed'
 alias te='todolist edit'
 alias evim='vim ~/.vimrc'
 alias emux='vim ~/.tmux.conf'
-alias py='python -u'
+alias py='python3 -u'
 
 export EDITOR=vim
 export PATH=$PATH:/usr/local/go/bin
