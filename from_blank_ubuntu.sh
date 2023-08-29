@@ -5,7 +5,7 @@ mkdir -p ~/.vim/backup
 
 
 #Libraries required by a lot of stuff
-sudo apt-get install automake libevent-dev libncurses5-dev gnome-tweak-tool libncursesw5-dev dconf-editor git python-dev zsh trash-cli libtool autogen gfortran libreadline-dev i3 curl python3-dev cmake direnv xsel vim-gtk3 build-essential tmux htop nitrogen compton -y
+sudo apt-get install automake libevent-dev libncurses5-dev gnome-tweaks libncursesw5-dev dconf-editor git zsh trash-cli libtool autogen gfortran libreadline-dev i3 curl python3-dev cmake direnv xsel vim-gtk3 build-essential tmux htop nitrogen compton -y
 
 
 #Configure git
@@ -25,9 +25,6 @@ cd tmp
 wget https://bootstrap.pypa.io/get-pip.py
 python3 get-pip.py --user
 rm get-pip.py
-
-#Install virtualenvwrapper
-#pip install virtualenvwrapper --user
 
 #Install powerline
 pip install --user powerline-status
@@ -55,5 +52,5 @@ sh dotfiles/setup.sh
 
 vim +PlugInstall +qall
 cd ~/.vim/plugged/YouCompleteMe
-./install.py --clang-completer
+./install.py
 
